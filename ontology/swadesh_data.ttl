@@ -1,2509 +1,852 @@
 @prefix : <http://www.semanticweb.org/ontologies/swadesh#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-:aku rdf:type :Word .
-:aku :represents :I .
-:aku :belongsToLanguage :id .
-
-:kuring rdf:type :Word .
-:kuring :represents :I .
-:kuring :belongsToLanguage :su .
-
-:saye rdf:type :Word .
-:saye :represents :I .
-:saye :belongsToLanguage :mel .
-
-:kamu rdf:type :Word .
-:kamu :represents :YOU_SINGLE .
-:kamu :belongsToLanguage :id .
-
-:manéh rdf:type :Word .
-:manéh :represents :YOU_SINGLE .
-:manéh :belongsToLanguage :su .
-
-:mike rdf:type :Word .
-:mike :represents :YOU_SINGLE .
-:mike :belongsToLanguage :mel .
-
-:dia rdf:type :Word .
-:dia :represents :HE .
-:dia :belongsToLanguage :id .
-
-:manéhna rdf:type :Word .
-:manéhna :represents :HE .
-:manéhna :belongsToLanguage :su .
-
-:die rdf:type :Word .
-:die :represents :HE .
-:die :belongsToLanguage :mel .
-
-:dia rdf:type :Word .
-:dia :represents :SHE .
-:dia :belongsToLanguage :id .
-
-:manéhna rdf:type :Word .
-:manéhna :represents :SHE .
-:manéhna :belongsToLanguage :su .
-
-:die rdf:type :Word .
-:die :represents :SHE .
-:die :belongsToLanguage :mel .
-
-:kita rdf:type :Word .
-:kita :represents :WE .
-:kita :belongsToLanguage :id .
-
-:arurang rdf:type :Word .
-:arurang :represents :WE .
-:arurang :belongsToLanguage :su .
-
-:kite_orang rdf:type :Word .
-:kite_orang :represents :WE .
-:kite_orang :belongsToLanguage :mel .
-
-:kalian rdf:type :Word .
-:kalian :represents :YOU_PLURAL .
-:kalian :belongsToLanguage :id .
-
-:maranéh rdf:type :Word .
-:maranéh :represents :YOU_PLURAL .
-:maranéh :belongsToLanguage :su .
-
-:korang rdf:type :Word .
-:korang :represents :YOU_PLURAL .
-:korang :belongsToLanguage :mel .
-
-:mereka rdf:type :Word .
-:mereka :represents :THEY .
-:mereka :belongsToLanguage :id .
-
-:maranéhna rdf:type :Word .
-:maranéhna :represents :THEY .
-:maranéhna :belongsToLanguage :su .
-
-:die_orang rdf:type :Word .
-:die_orang :represents :THEY .
-:die_orang :belongsToLanguage :mel .
-
-:ini rdf:type :Word .
-:ini :represents :THIS .
-:ini :belongsToLanguage :id .
-
-:ieu rdf:type :Word .
-:ieu :represents :THIS .
-:ieu :belongsToLanguage :su .
-
-:ini rdf:type :Word .
-:ini :represents :THIS .
-:ini :belongsToLanguage :mel .
-
-:itu rdf:type :Word .
-:itu :represents :THAT .
-:itu :belongsToLanguage :id .
-
-:éta rdf:type :Word .
-:éta :represents :THAT .
-:éta :belongsToLanguage :su .
-
-:itu rdf:type :Word .
-:itu :represents :THAT .
-:itu :belongsToLanguage :mel .
-
-:di_sini rdf:type :Word .
-:di_sini :represents :HERE .
-:di_sini :belongsToLanguage :id .
-
-:di_dieu rdf:type :Word .
-:di_dieu :represents :HERE .
-:di_dieu :belongsToLanguage :su .
-
-:di_sini rdf:type :Word .
-:di_sini :represents :HERE .
-:di_sini :belongsToLanguage :mel .
-
-:di_situ rdf:type :Word .
-:di_situ :represents :THERE .
-:di_situ :belongsToLanguage :id .
-
-:di_ditu rdf:type :Word .
-:di_ditu :represents :THERE .
-:di_ditu :belongsToLanguage :su .
-
-:kat_sane rdf:type :Word .
-:kat_sane :represents :THERE .
-:kat_sane :belongsToLanguage :mel .
-
-:siapa rdf:type :Word .
-:siapa :represents :WHO .
-:siapa :belongsToLanguage :id .
-
-:saha rdf:type :Word .
-:saha :represents :WHO .
-:saha :belongsToLanguage :su .
-
-:sape rdf:type :Word .
-:sape :represents :WHO .
-:sape :belongsToLanguage :mel .
-
-:apa rdf:type :Word .
-:apa :represents :WHAT .
-:apa :belongsToLanguage :id .
-
-:naon rdf:type :Word .
-:naon :represents :WHAT .
-:naon :belongsToLanguage :su .
-
-:ape rdf:type :Word .
-:ape :represents :WHAT .
-:ape :belongsToLanguage :mel .
-
-:di_mana rdf:type :Word .
-:di_mana :represents :WHERE .
-:di_mana :belongsToLanguage :id .
-
-:di_mana rdf:type :Word .
-:di_mana :represents :WHERE .
-:di_mana :belongsToLanguage :su .
-
-:kat_mane rdf:type :Word .
-:kat_mane :represents :WHERE .
-:kat_mane :belongsToLanguage :mel .
-
-:kapan rdf:type :Word .
-:kapan :represents :WHEN .
-:kapan :belongsToLanguage :id .
-
-:iraha rdf:type :Word .
-:iraha :represents :WHEN .
-:iraha :belongsToLanguage :su .
-
-:bile rdf:type :Word .
-:bile :represents :WHEN .
-:bile :belongsToLanguage :mel .
-
-:bagaimana rdf:type :Word .
-:bagaimana :represents :HOW .
-:bagaimana :belongsToLanguage :id .
-
-:kumaha rdf:type :Word .
-:kumaha :represents :HOW .
-:kumaha :belongsToLanguage :su .
-
-:macam_mane rdf:type :Word .
-:macam_mane :represents :HOW .
-:macam_mane :belongsToLanguage :mel .
-
-:tidak rdf:type :Word .
-:tidak :represents :NOT .
-:tidak :belongsToLanguage :id .
-
-:lain rdf:type :Word .
-:lain :represents :NOT .
-:lain :belongsToLanguage :su .
-
-:tak rdf:type :Word .
-:tak :represents :NOT .
-:tak :belongsToLanguage :mel .
-
-:semua rdf:type :Word .
-:semua :represents :ALL .
-:semua :belongsToLanguage :id .
-
-:kabéh rdf:type :Word .
-:kabéh :represents :ALL .
-:kabéh :belongsToLanguage :su .
-
-:semue rdf:type :Word .
-:semue :represents :ALL .
-:semue :belongsToLanguage :mel .
-
-:banyak rdf:type :Word .
-:banyak :represents :MANY .
-:banyak :belongsToLanguage :id .
-
-:loba rdf:type :Word .
-:loba :represents :MANY .
-:loba :belongsToLanguage :su .
-
-:banyak rdf:type :Word .
-:banyak :represents :MANY .
-:banyak :belongsToLanguage :mel .
-
-:beberapa rdf:type :Word .
-:beberapa :represents :SOME .
-:beberapa :belongsToLanguage :id .
-
-:sababaraha rdf:type :Word .
-:sababaraha :represents :SOME .
-:sababaraha :belongsToLanguage :su .
-
-:sebahagian rdf:type :Word .
-:sebahagian :represents :SOME .
-:sebahagian :belongsToLanguage :mel .
-
-:sedikit rdf:type :Word .
-:sedikit :represents :FEW .
-:sedikit :belongsToLanguage :id .
-
-:saeutik rdf:type :Word .
-:saeutik :represents :FEW .
-:saeutik :belongsToLanguage :su .
-
-:sikit rdf:type :Word .
-:sikit :represents :FEW .
-:sikit :belongsToLanguage :mel .
-
-:lain rdf:type :Word .
-:lain :represents :OTHER .
-:lain :belongsToLanguage :id .
-
-:lian rdf:type :Word .
-:lian :represents :OTHER .
-:lian :belongsToLanguage :su .
-
-:beze rdf:type :Word .
-:beze :represents :OTHER .
-:beze :belongsToLanguage :mel .
-
-:satu rdf:type :Word .
-:satu :represents :ONE .
-:satu :belongsToLanguage :id .
-
-:hiji rdf:type :Word .
-:hiji :represents :ONE .
-:hiji :belongsToLanguage :su .
-
-:satu rdf:type :Word .
-:satu :represents :ONE .
-:satu :belongsToLanguage :mel .
-
-:dua rdf:type :Word .
-:dua :represents :TWO .
-:dua :belongsToLanguage :id .
-
-:dua rdf:type :Word .
-:dua :represents :TWO .
-:dua :belongsToLanguage :su .
-
-:due rdf:type :Word .
-:due :represents :TWO .
-:due :belongsToLanguage :mel .
-
-:tiga rdf:type :Word .
-:tiga :represents :THREE .
-:tiga :belongsToLanguage :id .
-
-:tilu rdf:type :Word .
-:tilu :represents :THREE .
-:tilu :belongsToLanguage :su .
-
-:tige rdf:type :Word .
-:tige :represents :THREE .
-:tige :belongsToLanguage :mel .
-
-:empat rdf:type :Word .
-:empat :represents :FOUR .
-:empat :belongsToLanguage :id .
-
-:opat rdf:type :Word .
-:opat :represents :FOUR .
-:opat :belongsToLanguage :su .
-
-:empat rdf:type :Word .
-:empat :represents :FOUR .
-:empat :belongsToLanguage :mel .
-
-:lima rdf:type :Word .
-:lima :represents :FIVE .
-:lima :belongsToLanguage :id .
-
-:lima rdf:type :Word .
-:lima :represents :FIVE .
-:lima :belongsToLanguage :su .
-
-:lime rdf:type :Word .
-:lime :represents :FIVE .
-:lime :belongsToLanguage :mel .
-
-:besar rdf:type :Word .
-:besar :represents :BIG .
-:besar :belongsToLanguage :id .
-
-:badag rdf:type :Word .
-:badag :represents :BIG .
-:badag :belongsToLanguage :su .
-
-:besak rdf:type :Word .
-:besak :represents :BIG .
-:besak :belongsToLanguage :mel .
-
-:panjang rdf:type :Word .
-:panjang :represents :LONG .
-:panjang :belongsToLanguage :id .
-
-:panjang rdf:type :Word .
-:panjang :represents :LONG .
-:panjang :belongsToLanguage :su .
-
-:panjang rdf:type :Word .
-:panjang :represents :LONG .
-:panjang :belongsToLanguage :mel .
-
-:lebar rdf:type :Word .
-:lebar :represents :WIDE .
-:lebar :belongsToLanguage :id .
-
-:rubak rdf:type :Word .
-:rubak :represents :WIDE .
-:rubak :belongsToLanguage :su .
-
-:luas rdf:type :Word .
-:luas :represents :WIDE .
-:luas :belongsToLanguage :mel .
-
-:tebal rdf:type :Word .
-:tebal :represents :THICK .
-:tebal :belongsToLanguage :id .
-
-:kandel rdf:type :Word .
-:kandel :represents :THICK .
-:kandel :belongsToLanguage :su .
-
-:tebal rdf:type :Word .
-:tebal :represents :THICK .
-:tebal :belongsToLanguage :mel .
-
-:berat rdf:type :Word .
-:berat :represents :HEAVY .
-:berat :belongsToLanguage :id .
-
-:beurat rdf:type :Word .
-:beurat :represents :HEAVY .
-:beurat :belongsToLanguage :su .
-
-:berat rdf:type :Word .
-:berat :represents :HEAVY .
-:berat :belongsToLanguage :mel .
-
-:kecil rdf:type :Word .
-:kecil :represents :SMALL .
-:kecil :belongsToLanguage :id .
-
-:leutik rdf:type :Word .
-:leutik :represents :SMALL .
-:leutik :belongsToLanguage :su .
-
-:kecik rdf:type :Word .
-:kecik :represents :SMALL .
-:kecik :belongsToLanguage :mel .
-
-:pendek rdf:type :Word .
-:pendek :represents :SHORT .
-:pendek :belongsToLanguage :id .
-
-:pondok rdf:type :Word .
-:pondok :represents :SHORT .
-:pondok :belongsToLanguage :su .
-
-:pendek rdf:type :Word .
-:pendek :represents :SHORT .
-:pendek :belongsToLanguage :mel .
-
-:sempit rdf:type :Word .
-:sempit :represents :NARROW .
-:sempit :belongsToLanguage :id .
-
-:heureut rdf:type :Word .
-:heureut :represents :NARROW .
-:heureut :belongsToLanguage :su .
-
-:sempit rdf:type :Word .
-:sempit :represents :NARROW .
-:sempit :belongsToLanguage :mel .
-
-:tipis rdf:type :Word .
-:tipis :represents :THIN .
-:tipis :belongsToLanguage :id .
-
-:ipis rdf:type :Word .
-:ipis :represents :THIN .
-:ipis :belongsToLanguage :su .
-
-:nipis rdf:type :Word .
-:nipis :represents :THIN .
-:nipis :belongsToLanguage :mel .
-
-:wanita rdf:type :Word .
-:wanita :represents :WOMAN .
-:wanita :belongsToLanguage :id .
-
-:awéwé rdf:type :Word .
-:awéwé :represents :WOMAN .
-:awéwé :belongsToLanguage :su .
-
-:puan rdf:type :Word .
-:puan :represents :WOMAN .
-:puan :belongsToLanguage :mel .
-
-:pria rdf:type :Word .
-:pria :represents :MAN_ADULT_MALE .
-:pria :belongsToLanguage :id .
-
-:lalaki rdf:type :Word .
-:lalaki :represents :MAN_ADULT_MALE .
-:lalaki :belongsToLanguage :su .
-
-:lelaki rdf:type :Word .
-:lelaki :represents :MAN_ADULT_MALE .
-:lelaki :belongsToLanguage :mel .
-
-:manusia rdf:type :Word .
-:manusia :represents :MAN_HUMAN_BEING .
-:manusia :belongsToLanguage :id .
-
-:jalma rdf:type :Word .
-:jalma :represents :MAN_HUMAN_BEING .
-:jalma :belongsToLanguage :su .
-
-:manusie rdf:type :Word .
-:manusie :represents :MAN_HUMAN_BEING .
-:manusie :belongsToLanguage :mel .
-
-:anak rdf:type :Word .
-:anak :represents :CHILD .
-:anak :belongsToLanguage :id .
-
-:budak rdf:type :Word .
-:budak :represents :CHILD .
-:budak :belongsToLanguage :su .
-
-:budak rdf:type :Word .
-:budak :represents :CHILD .
-:budak :belongsToLanguage :mel .
-
-:istri rdf:type :Word .
-:istri :represents :WIFE .
-:istri :belongsToLanguage :id .
-
-:pamajikan rdf:type :Word .
-:pamajikan :represents :WIFE .
-:pamajikan :belongsToLanguage :su .
-
-:bini rdf:type :Word .
-:bini :represents :WIFE .
-:bini :belongsToLanguage :mel .
-
-:suami rdf:type :Word .
-:suami :represents :HUSBAND .
-:suami :belongsToLanguage :id .
-
-:salaki rdf:type :Word .
-:salaki :represents :HUSBAND .
-:salaki :belongsToLanguage :su .
-
-:laki rdf:type :Word .
-:laki :represents :HUSBAND .
-:laki :belongsToLanguage :mel .
-
-:ibu rdf:type :Word .
-:ibu :represents :MOTHER .
-:ibu :belongsToLanguage :id .
-
-:indung rdf:type :Word .
-:indung :represents :MOTHER .
-:indung :belongsToLanguage :su .
-
-:mak rdf:type :Word .
-:mak :represents :MOTHER .
-:mak :belongsToLanguage :mel .
-
-:ayah rdf:type :Word .
-:ayah :represents :FATHER .
-:ayah :belongsToLanguage :id .
-
-:bapa rdf:type :Word .
-:bapa :represents :FATHER .
-:bapa :belongsToLanguage :su .
-
-:bapa rdf:type :Word .
-:bapa :represents :FATHER .
-:bapa :belongsToLanguage :mel .
-
-:binatang rdf:type :Word .
-:binatang :represents :ANIMAL .
-:binatang :belongsToLanguage :id .
-
-:sato rdf:type :Word .
-:sato :represents :ANIMAL .
-:sato :belongsToLanguage :su .
-
-:haiwan rdf:type :Word .
-:haiwan :represents :ANIMAL .
-:haiwan :belongsToLanguage :mel .
-
-:ikan rdf:type :Word .
-:ikan :represents :FISH .
-:ikan :belongsToLanguage :id .
-
-:lauk rdf:type :Word .
-:lauk :represents :FISH .
-:lauk :belongsToLanguage :su .
-
-:hikan rdf:type :Word .
-:hikan :represents :FISH .
-:hikan :belongsToLanguage :mel .
-
-:burung rdf:type :Word .
-:burung :represents :BIRD .
-:burung :belongsToLanguage :id .
-
-:manuk rdf:type :Word .
-:manuk :represents :BIRD .
-:manuk :belongsToLanguage :su .
-
-:burung rdf:type :Word .
-:burung :represents :BIRD .
-:burung :belongsToLanguage :mel .
-
-:anjing rdf:type :Word .
-:anjing :represents :DOG .
-:anjing :belongsToLanguage :id .
-
-:anjing rdf:type :Word .
-:anjing :represents :DOG .
-:anjing :belongsToLanguage :su .
-
-:hanjing rdf:type :Word .
-:hanjing :represents :DOG .
-:hanjing :belongsToLanguage :mel .
-
-:kutu rdf:type :Word .
-:kutu :represents :LOUSE .
-:kutu :belongsToLanguage :id .
-
-:kutu rdf:type :Word .
-:kutu :represents :LOUSE .
-:kutu :belongsToLanguage :su .
-
-:kutu rdf:type :Word .
-:kutu :represents :LOUSE .
-:kutu :belongsToLanguage :mel .
-
-:ular rdf:type :Word .
-:ular :represents :SNAKE .
-:ular :belongsToLanguage :id .
-
-:oray rdf:type :Word .
-:oray :represents :SNAKE .
-:oray :belongsToLanguage :su .
-
-:ular rdf:type :Word .
-:ular :represents :SNAKE .
-:ular :belongsToLanguage :mel .
-
-:cacing rdf:type :Word .
-:cacing :represents :WORM .
-:cacing :belongsToLanguage :id .
-
-:cacing rdf:type :Word .
-:cacing :represents :WORM .
-:cacing :belongsToLanguage :su .
-
-:cacing rdf:type :Word .
-:cacing :represents :WORM .
-:cacing :belongsToLanguage :mel .
-
-:pohon rdf:type :Word .
-:pohon :represents :TREE .
-:pohon :belongsToLanguage :id .
-
-:tangkal rdf:type :Word .
-:tangkal :represents :TREE .
-:tangkal :belongsToLanguage :su .
-
-:pokok rdf:type :Word .
-:pokok :represents :TREE .
-:pokok :belongsToLanguage :mel .
-
-:hutan rdf:type :Word .
-:hutan :represents :FOREST .
-:hutan :belongsToLanguage :id .
-
-:leuweung rdf:type :Word .
-:leuweung :represents :FOREST .
-:leuweung :belongsToLanguage :su .
-
-:hutan rdf:type :Word .
-:hutan :represents :FOREST .
-:hutan :belongsToLanguage :mel .
-
-:ranting rdf:type :Word .
-:ranting :represents :STICK .
-:ranting :belongsToLanguage :id .
-
-:iteuk rdf:type :Word .
-:iteuk :represents :STICK .
-:iteuk :belongsToLanguage :su .
-
-:cabang_pokok rdf:type :Word .
-:cabang_pokok :represents :STICK .
-:cabang_pokok :belongsToLanguage :mel .
-
-:buah rdf:type :Word .
-:buah :represents :FRUIT .
-:buah :belongsToLanguage :id .
-
-:buah rdf:type :Word .
-:buah :represents :FRUIT .
-:buah :belongsToLanguage :su .
-
-:buah rdf:type :Word .
-:buah :represents :FRUIT .
-:buah :belongsToLanguage :mel .
-
-:biji rdf:type :Word .
-:biji :represents :SEED .
-:biji :belongsToLanguage :id .
-
-:siki rdf:type :Word .
-:siki :represents :SEED .
-:siki :belongsToLanguage :su .
-
-:biji rdf:type :Word .
-:biji :represents :SEED .
-:biji :belongsToLanguage :mel .
-
-:daun rdf:type :Word .
-:daun :represents :LEAF .
-:daun :belongsToLanguage :id .
-
-:daun rdf:type :Word .
-:daun :represents :LEAF .
-:daun :belongsToLanguage :su .
-
-:daun rdf:type :Word .
-:daun :represents :LEAF .
-:daun :belongsToLanguage :mel .
-
-:akar rdf:type :Word .
-:akar :represents :ROOT .
-:akar :belongsToLanguage :id .
-
-:akar rdf:type :Word .
-:akar :represents :ROOT .
-:akar :belongsToLanguage :su .
-
-:akar rdf:type :Word .
-:akar :represents :ROOT .
-:akar :belongsToLanguage :mel .
-
-:kulit_pohon rdf:type :Word .
-:kulit_pohon :represents :BARK .
-:kulit_pohon :belongsToLanguage :id .
-
-:kai rdf:type :Word .
-:kai :represents :BARK .
-:kai :belongsToLanguage :su .
-
-:kulit_kayu rdf:type :Word .
-:kulit_kayu :represents :BARK .
-:kulit_kayu :belongsToLanguage :mel .
-
-:bunga rdf:type :Word .
-:bunga :represents :FLOWER .
-:bunga :belongsToLanguage :id .
-
-:kembang rdf:type :Word .
-:kembang :represents :FLOWER .
-:kembang :belongsToLanguage :su .
-
-:bunga rdf:type :Word .
-:bunga :represents :FLOWER .
-:bunga :belongsToLanguage :mel .
-
-:rumput rdf:type :Word .
-:rumput :represents :GRASS .
-:rumput :belongsToLanguage :id .
-
-:jukut rdf:type :Word .
-:jukut :represents :GRASS .
-:jukut :belongsToLanguage :su .
-
-:rumput rdf:type :Word .
-:rumput :represents :GRASS .
-:rumput :belongsToLanguage :mel .
-
-:tali rdf:type :Word .
-:tali :represents :ROPE .
-:tali :belongsToLanguage :id .
-
-:tambang rdf:type :Word .
-:tambang :represents :ROPE .
-:tambang :belongsToLanguage :su .
-
-:tali rdf:type :Word .
-:tali :represents :ROPE .
-:tali :belongsToLanguage :mel .
-
-:kulit rdf:type :Word .
-:kulit :represents :SKIN .
-:kulit :belongsToLanguage :id .
-
-:kulit rdf:type :Word .
-:kulit :represents :SKIN .
-:kulit :belongsToLanguage :su .
-
-:kulit rdf:type :Word .
-:kulit :represents :SKIN .
-:kulit :belongsToLanguage :mel .
-
-:daging rdf:type :Word .
-:daging :represents :MEAT .
-:daging :belongsToLanguage :id .
-
-:daging rdf:type :Word .
-:daging :represents :MEAT .
-:daging :belongsToLanguage :su .
-
-:daging rdf:type :Word .
-:daging :represents :MEAT .
-:daging :belongsToLanguage :mel .
-
-:darah rdf:type :Word .
-:darah :represents :BLOOD .
-:darah :belongsToLanguage :id .
-
-:getih rdf:type :Word .
-:getih :represents :BLOOD .
-:getih :belongsToLanguage :su .
-
-:dareh rdf:type :Word .
-:dareh :represents :BLOOD .
-:dareh :belongsToLanguage :mel .
-
-:tulang rdf:type :Word .
-:tulang :represents :BONE .
-:tulang :belongsToLanguage :id .
-
-:tulang rdf:type :Word .
-:tulang :represents :BONE .
-:tulang :belongsToLanguage :su .
-
-:tulang rdf:type :Word .
-:tulang :represents :BONE .
-:tulang :belongsToLanguage :mel .
-
-:lemak rdf:type :Word .
-:lemak :represents :FAT_NOUN .
-:lemak :belongsToLanguage :id .
-
-:lemak rdf:type :Word .
-:lemak :represents :FAT_NOUN .
-:lemak :belongsToLanguage :su .
-
-:lemak rdf:type :Word .
-:lemak :represents :FAT_NOUN .
-:lemak :belongsToLanguage :mel .
-
-:telur rdf:type :Word .
-:telur :represents :EGG .
-:telur :belongsToLanguage :id .
-
-:endog rdf:type :Word .
-:endog :represents :EGG .
-:endog :belongsToLanguage :su .
-
-:telo rdf:type :Word .
-:telo :represents :EGG .
-:telo :belongsToLanguage :mel .
-
-:tanduk rdf:type :Word .
-:tanduk :represents :HORN .
-:tanduk :belongsToLanguage :id .
-
-:tanduk rdf:type :Word .
-:tanduk :represents :HORN .
-:tanduk :belongsToLanguage :su .
-
-:tanduk rdf:type :Word .
-:tanduk :represents :HORN .
-:tanduk :belongsToLanguage :mel .
-
-:ekor rdf:type :Word .
-:ekor :represents :TAIL .
-:ekor :belongsToLanguage :id .
-
-:buntut rdf:type :Word .
-:buntut :represents :TAIL .
-:buntut :belongsToLanguage :su .
-
-:ekor rdf:type :Word .
-:ekor :represents :TAIL .
-:ekor :belongsToLanguage :mel .
-
-:bulu rdf:type :Word .
-:bulu :represents :FEATHER .
-:bulu :belongsToLanguage :id .
-
-:bulu rdf:type :Word .
-:bulu :represents :FEATHER .
-:bulu :belongsToLanguage :su .
-
-:bulu rdf:type :Word .
-:bulu :represents :FEATHER .
-:bulu :belongsToLanguage :mel .
-
-:rambut rdf:type :Word .
-:rambut :represents :HAIR .
-:rambut :belongsToLanguage :id .
-
-:buuk rdf:type :Word .
-:buuk :represents :HAIR .
-:buuk :belongsToLanguage :su .
-
-:rambut rdf:type :Word .
-:rambut :represents :HAIR .
-:rambut :belongsToLanguage :mel .
-
-:kepala rdf:type :Word .
-:kepala :represents :HEAD .
-:kepala :belongsToLanguage :id .
-
-:buuk rdf:type :Word .
-:buuk :represents :HEAD .
-:buuk :belongsToLanguage :su .
-
-:hulu rdf:type :Word .
-:hulu :represents :HEAD .
-:hulu :belongsToLanguage :mel .
-
-:telinga rdf:type :Word .
-:telinga :represents :EAR .
-:telinga :belongsToLanguage :id .
-
-:ceuli rdf:type :Word .
-:ceuli :represents :EAR .
-:ceuli :belongsToLanguage :su .
-
-:telinga rdf:type :Word .
-:telinga :represents :EAR .
-:telinga :belongsToLanguage :mel .
-
-:mata rdf:type :Word .
-:mata :represents :EYE .
-:mata :belongsToLanguage :id .
-
-:panon rdf:type :Word .
-:panon :represents :EYE .
-:panon :belongsToLanguage :su .
-
-:mate rdf:type :Word .
-:mate :represents :EYE .
-:mate :belongsToLanguage :mel .
-
-:hidung rdf:type :Word .
-:hidung :represents :NOSE .
-:hidung :belongsToLanguage :id .
-
-:irung rdf:type :Word .
-:irung :represents :NOSE .
-:irung :belongsToLanguage :su .
-
-:hidung rdf:type :Word .
-:hidung :represents :NOSE .
-:hidung :belongsToLanguage :mel .
-
-:mulut rdf:type :Word .
-:mulut :represents :MOUTH .
-:mulut :belongsToLanguage :id .
-
-:sungut rdf:type :Word .
-:sungut :represents :MOUTH .
-:sungut :belongsToLanguage :su .
-
-:mulot rdf:type :Word .
-:mulot :represents :MOUTH .
-:mulot :belongsToLanguage :mel .
-
-:gigi rdf:type :Word .
-:gigi :represents :TOOTH .
-:gigi :belongsToLanguage :id .
-
-:huntu rdf:type :Word .
-:huntu :represents :TOOTH .
-:huntu :belongsToLanguage :su .
-
-:gigi rdf:type :Word .
-:gigi :represents :TOOTH .
-:gigi :belongsToLanguage :mel .
-
-:lidah rdf:type :Word .
-:lidah :represents :TONGUE .
-:lidah :belongsToLanguage :id .
-
-:létah rdf:type :Word .
-:létah :represents :TONGUE .
-:létah :belongsToLanguage :su .
-
-:lidah rdf:type :Word .
-:lidah :represents :TONGUE .
-:lidah :belongsToLanguage :mel .
-
-:kuku rdf:type :Word .
-:kuku :represents :FINGERNAIL .
-:kuku :belongsToLanguage :id .
-
-:kuku rdf:type :Word .
-:kuku :represents :FINGERNAIL .
-:kuku :belongsToLanguage :su .
-
-:kuku rdf:type :Word .
-:kuku :represents :FINGERNAIL .
-:kuku :belongsToLanguage :mel .
-
-:kaki rdf:type :Word .
-:kaki :represents :FOOT .
-:kaki :belongsToLanguage :id .
-
-:suku rdf:type :Word .
-:suku :represents :FOOT .
-:suku :belongsToLanguage :su .
-
-:kaki rdf:type :Word .
-:kaki :represents :FOOT .
-:kaki :belongsToLanguage :mel .
-
-:tungkai rdf:type :Word .
-:tungkai :represents :LEG .
-:tungkai :belongsToLanguage :id .
-
-:dampal_suku rdf:type :Word .
-:dampal_suku :represents :LEG .
-:dampal_suku :belongsToLanguage :su .
-
-:tapak_kaki rdf:type :Word .
-:tapak_kaki :represents :LEG .
-:tapak_kaki :belongsToLanguage :mel .
-
-:lutut rdf:type :Word .
-:lutut :represents :KNEE .
-:lutut :belongsToLanguage :id .
-
-:tuur rdf:type :Word .
-:tuur :represents :KNEE .
-:tuur :belongsToLanguage :su .
-
-:lutut rdf:type :Word .
-:lutut :represents :KNEE .
-:lutut :belongsToLanguage :mel .
-
-:tangan rdf:type :Word .
-:tangan :represents :HAND .
-:tangan :belongsToLanguage :id .
-
-:leungeun rdf:type :Word .
-:leungeun :represents :HAND .
-:leungeun :belongsToLanguage :su .
-
-:tangan rdf:type :Word .
-:tangan :represents :HAND .
-:tangan :belongsToLanguage :mel .
-
-:sayap rdf:type :Word .
-:sayap :represents :WING .
-:sayap :belongsToLanguage :id .
-
-:jangjang rdf:type :Word .
-:jangjang :represents :WING .
-:jangjang :belongsToLanguage :su .
-
-:sayap rdf:type :Word .
-:sayap :represents :WING .
-:sayap :belongsToLanguage :mel .
-
-:perut rdf:type :Word .
-:perut :represents :BELLY .
-:perut :belongsToLanguage :id .
-
-:beuteung rdf:type :Word .
-:beuteung :represents :BELLY .
-:beuteung :belongsToLanguage :su .
-
-:perut rdf:type :Word .
-:perut :represents :BELLY .
-:perut :belongsToLanguage :mel .
-
-:usus rdf:type :Word .
-:usus :represents :GUTS .
-:usus :belongsToLanguage :id .
-
-:peujit rdf:type :Word .
-:peujit :represents :GUTS .
-:peujit :belongsToLanguage :su .
-
-:usus rdf:type :Word .
-:usus :represents :GUTS .
-:usus :belongsToLanguage :mel .
-
-:leher rdf:type :Word .
-:leher :represents :NECK .
-:leher :belongsToLanguage :id .
-
-:beuheung rdf:type :Word .
-:beuheung :represents :NECK .
-:beuheung :belongsToLanguage :su .
-
-:leher rdf:type :Word .
-:leher :represents :NECK .
-:leher :belongsToLanguage :mel .
-
-:punggung rdf:type :Word .
-:punggung :represents :BACK .
-:punggung :belongsToLanguage :id .
-
-:tonggong rdf:type :Word .
-:tonggong :represents :BACK .
-:tonggong :belongsToLanguage :su .
-
-:belakang_badan rdf:type :Word .
-:belakang_badan :represents :BACK .
-:belakang_badan :belongsToLanguage :mel .
-
-:payudara rdf:type :Word .
-:payudara :represents :BREAST .
-:payudara :belongsToLanguage :id .
-
-:susu rdf:type :Word .
-:susu :represents :BREAST .
-:susu :belongsToLanguage :su .
-
-:susu rdf:type :Word .
-:susu :represents :BREAST .
-:susu :belongsToLanguage :mel .
-
-:jantung rdf:type :Word .
-:jantung :represents :HEART .
-:jantung :belongsToLanguage :id .
-
-:jajantung rdf:type :Word .
-:jajantung :represents :HEART .
-:jajantung :belongsToLanguage :su .
-
-:hati rdf:type :Word .
-:hati :represents :HEART .
-:hati :belongsToLanguage :mel .
-
-:hati rdf:type :Word .
-:hati :represents :LIVER .
-:hati :belongsToLanguage :id .
-
-:haté rdf:type :Word .
-:haté :represents :LIVER .
-:haté :belongsToLanguage :su .
-
-:hati rdf:type :Word .
-:hati :represents :LIVER .
-:hati :belongsToLanguage :mel .
-
-:minum rdf:type :Word .
-:minum :represents :DRINK .
-:minum :belongsToLanguage :id .
-
-:inum rdf:type :Word .
-:inum :represents :DRINK .
-:inum :belongsToLanguage :su .
-
-:minum rdf:type :Word .
-:minum :represents :DRINK .
-:minum :belongsToLanguage :mel .
-
-:makan rdf:type :Word .
-:makan :represents :EAT .
-:makan :belongsToLanguage :id .
-
-:dahar rdf:type :Word .
-:dahar :represents :EAT .
-:dahar :belongsToLanguage :su .
-
-:makan rdf:type :Word .
-:makan :represents :EAT .
-:makan :belongsToLanguage :mel .
-
-:gigit rdf:type :Word .
-:gigit :represents :BITE .
-:gigit :belongsToLanguage :id .
-
-:gégél rdf:type :Word .
-:gégél :represents :BITE .
-:gégél :belongsToLanguage :su .
-
-:keket rdf:type :Word .
-:keket :represents :BITE .
-:keket :belongsToLanguage :mel .
-
-:isap rdf:type :Word .
-:isap :represents :SUCK .
-:isap :belongsToLanguage :id .
-
-:nyoco rdf:type :Word .
-:nyoco :represents :SUCK .
-:nyoco :belongsToLanguage :su .
-
-:isap rdf:type :Word .
-:isap :represents :SUCK .
-:isap :belongsToLanguage :mel .
-
-:ludah rdf:type :Word .
-:ludah :represents :SPIT .
-:ludah :belongsToLanguage :id .
-
-:ciduh rdf:type :Word .
-:ciduh :represents :SPIT .
-:ciduh :belongsToLanguage :su .
-
-:ludah rdf:type :Word .
-:ludah :represents :SPIT .
-:ludah :belongsToLanguage :mel .
-
-:muntah rdf:type :Word .
-:muntah :represents :VOMIT .
-:muntah :belongsToLanguage :id .
-
-:utah rdf:type :Word .
-:utah :represents :VOMIT .
-:utah :belongsToLanguage :su .
-
-:muntah rdf:type :Word .
-:muntah :represents :VOMIT .
-:muntah :belongsToLanguage :mel .
-
-:tiup rdf:type :Word .
-:tiup :represents :BLOW .
-:tiup :belongsToLanguage :id .
-
-:tiup rdf:type :Word .
-:tiup :represents :BLOW .
-:tiup :belongsToLanguage :su .
-
-:tiup rdf:type :Word .
-:tiup :represents :BLOW .
-:tiup :belongsToLanguage :mel .
-
-:napas rdf:type :Word .
-:napas :represents :BREATHE .
-:napas :belongsToLanguage :id .
-
-:rénghap rdf:type :Word .
-:rénghap :represents :BREATHE .
-:rénghap :belongsToLanguage :su .
-
-:nafas rdf:type :Word .
-:nafas :represents :BREATHE .
-:nafas :belongsToLanguage :mel .
-
-:tawa rdf:type :Word .
-:tawa :represents :LAUGH .
-:tawa :belongsToLanguage :id .
-
-:seuri rdf:type :Word .
-:seuri :represents :LAUGH .
-:seuri :belongsToLanguage :su .
-
-:gelak rdf:type :Word .
-:gelak :represents :LAUGH .
-:gelak :belongsToLanguage :mel .
-
-:lihat rdf:type :Word .
-:lihat :represents :SEE .
-:lihat :belongsToLanguage :id .
-
-:tempo rdf:type :Word .
-:tempo :represents :SEE .
-:tempo :belongsToLanguage :su .
-
-:tengok rdf:type :Word .
-:tengok :represents :SEE .
-:tengok :belongsToLanguage :mel .
-
-:dengar rdf:type :Word .
-:dengar :represents :HEAR .
-:dengar :belongsToLanguage :id .
-
-:déngé rdf:type :Word .
-:déngé :represents :HEAR .
-:déngé :belongsToLanguage :su .
-
-:dengar rdf:type :Word .
-:dengar :represents :HEAR .
-:dengar :belongsToLanguage :mel .
-
-:tahu rdf:type :Word .
-:tahu :represents :KNOW .
-:tahu :belongsToLanguage :id .
-
-:nyaho rdf:type :Word .
-:nyaho :represents :KNOW .
-:nyaho :belongsToLanguage :su .
-
-:reti rdf:type :Word .
-:reti :represents :KNOW .
-:reti :belongsToLanguage :mel .
-
-:pikir rdf:type :Word .
-:pikir :represents :THINK .
-:pikir :belongsToLanguage :id .
-
-:mikir rdf:type :Word .
-:mikir :represents :THINK .
-:mikir :belongsToLanguage :su .
-
-:fikir rdf:type :Word .
-:fikir :represents :THINK .
-:fikir :belongsToLanguage :mel .
-
-:cium rdf:type :Word .
-:cium :represents :SMELL .
-:cium :belongsToLanguage :id .
-
-:ambeu rdf:type :Word .
-:ambeu :represents :SMELL .
-:ambeu :belongsToLanguage :su .
-
-:cium rdf:type :Word .
-:cium :represents :SMELL .
-:cium :belongsToLanguage :mel .
-
-:takut rdf:type :Word .
-:takut :represents :FEAR .
-:takut :belongsToLanguage :id .
-
-:sieun rdf:type :Word .
-:sieun :represents :FEAR .
-:sieun :belongsToLanguage :su .
-
-:takut rdf:type :Word .
-:takut :represents :FEAR .
-:takut :belongsToLanguage :mel .
-
-:tidur rdf:type :Word .
-:tidur :represents :SLEEP .
-:tidur :belongsToLanguage :id .
-
-:saré rdf:type :Word .
-:saré :represents :SLEEP .
-:saré :belongsToLanguage :su .
-
-:tidur rdf:type :Word .
-:tidur :represents :SLEEP .
-:tidur :belongsToLanguage :mel .
-
-:hidup rdf:type :Word .
-:hidup :represents :LIVE .
-:hidup :belongsToLanguage :id .
-
-:hirup rdf:type :Word .
-:hirup :represents :LIVE .
-:hirup :belongsToLanguage :su .
-
-:hidup rdf:type :Word .
-:hidup :represents :LIVE .
-:hidup :belongsToLanguage :mel .
-
-:mati rdf:type :Word .
-:mati :represents :DIE .
-:mati :belongsToLanguage :id .
-
-:maot rdf:type :Word .
-:maot :represents :DIE .
-:maot :belongsToLanguage :su .
-
-:mati rdf:type :Word .
-:mati :represents :DIE .
-:mati :belongsToLanguage :mel .
-
-:bunuh rdf:type :Word .
-:bunuh :represents :KILL .
-:bunuh :belongsToLanguage :id .
-
-:maéhan rdf:type :Word .
-:maéhan :represents :KILL .
-:maéhan :belongsToLanguage :su .
-
-:bunuh rdf:type :Word .
-:bunuh :represents :KILL .
-:bunuh :belongsToLanguage :mel .
-
-:kelahi rdf:type :Word .
-:kelahi :represents :FIGHT .
-:kelahi :belongsToLanguage :id .
-
-:gelut rdf:type :Word .
-:gelut :represents :FIGHT .
-:gelut :belongsToLanguage :su .
-
-:gaduh rdf:type :Word .
-:gaduh :represents :FIGHT .
-:gaduh :belongsToLanguage :mel .
-
-:buru rdf:type :Word .
-:buru :represents :HUNT .
-:buru :belongsToLanguage :id .
-
-:moro rdf:type :Word .
-:moro :represents :HUNT .
-:moro :belongsToLanguage :su .
-
-:buru rdf:type :Word .
-:buru :represents :HUNT .
-:buru :belongsToLanguage :mel .
-
-:pukul rdf:type :Word .
-:pukul :represents :HIT .
-:pukul :belongsToLanguage :id .
-
-:takol rdf:type :Word .
-:takol :represents :HIT .
-:takol :belongsToLanguage :su .
-
-:hempuk rdf:type :Word .
-:hempuk :represents :HIT .
-:hempuk :belongsToLanguage :mel .
-
-:potong rdf:type :Word .
-:potong :represents :CUT .
-:potong :belongsToLanguage :id .
-
-:teukteuk rdf:type :Word .
-:teukteuk :represents :CUT .
-:teukteuk :belongsToLanguage :su .
-
-:potong rdf:type :Word .
-:potong :represents :CUT .
-:potong :belongsToLanguage :mel .
-
-:belah rdf:type :Word .
-:belah :represents :SPLIT .
-:belah :belongsToLanguage :id .
-
-:beulah rdf:type :Word .
-:beulah :represents :SPLIT .
-:beulah :belongsToLanguage :su .
-
-:bahagi rdf:type :Word .
-:bahagi :represents :SPLIT .
-:bahagi :belongsToLanguage :mel .
-
-:tusuk rdf:type :Word .
-:tusuk :represents :STAB .
-:tusuk :belongsToLanguage :id .
-
-:colok rdf:type :Word .
-:colok :represents :STAB .
-:colok :belongsToLanguage :su .
-
-:cucuk rdf:type :Word .
-:cucuk :represents :STAB .
-:cucuk :belongsToLanguage :mel .
-
-:garuk rdf:type :Word .
-:garuk :represents :SCRATCH .
-:garuk :belongsToLanguage :id .
-
-:corét rdf:type :Word .
-:corét :represents :SCRATCH .
-:corét :belongsToLanguage :su .
-
-:conteng rdf:type :Word .
-:conteng :represents :SCRATCH .
-:conteng :belongsToLanguage :mel .
-
-:gali rdf:type :Word .
-:gali :represents :DIG .
-:gali :belongsToLanguage :id .
-
-:gali rdf:type :Word .
-:gali :represents :DIG .
-:gali :belongsToLanguage :su .
-
-:gali rdf:type :Word .
-:gali :represents :DIG .
-:gali :belongsToLanguage :mel .
-
-:renang rdf:type :Word .
-:renang :represents :SWIM .
-:renang :belongsToLanguage :id .
-
-:ojay rdf:type :Word .
-:ojay :represents :SWIM .
-:ojay :belongsToLanguage :su .
-
-:renang rdf:type :Word .
-:renang :represents :SWIM .
-:renang :belongsToLanguage :mel .
-
-:terbang rdf:type :Word .
-:terbang :represents :FLY .
-:terbang :belongsToLanguage :id .
-
-:hiber rdf:type :Word .
-:hiber :represents :FLY .
-:hiber :belongsToLanguage :su .
-
-:terbang rdf:type :Word .
-:terbang :represents :FLY .
-:terbang :belongsToLanguage :mel .
-
-:jalan rdf:type :Word .
-:jalan :represents :WALK .
-:jalan :belongsToLanguage :id .
-
-:leumpang rdf:type :Word .
-:leumpang :represents :WALK .
-:leumpang :belongsToLanguage :su .
-
-:jalan rdf:type :Word .
-:jalan :represents :WALK .
-:jalan :belongsToLanguage :mel .
-
-:datang rdf:type :Word .
-:datang :represents :COME .
-:datang :belongsToLanguage :id .
-
-:datang rdf:type :Word .
-:datang :represents :COME .
-:datang :belongsToLanguage :su .
-
-:tibe rdf:type :Word .
-:tibe :represents :COME .
-:tibe :belongsToLanguage :mel .
-
-:baring rdf:type :Word .
-:baring :represents :LIE .
-:baring :belongsToLanguage :id .
-
-:kedeng rdf:type :Word .
-:kedeng :represents :LIE .
-:kedeng :belongsToLanguage :su .
-
-:baring rdf:type :Word .
-:baring :represents :LIE .
-:baring :belongsToLanguage :mel .
-
-:duduk rdf:type :Word .
-:duduk :represents :SIT .
-:duduk :belongsToLanguage :id .
-
-:diuk rdf:type :Word .
-:diuk :represents :SIT .
-:diuk :belongsToLanguage :su .
-
-:duduk rdf:type :Word .
-:duduk :represents :SIT .
-:duduk :belongsToLanguage :mel .
-
-:diri rdf:type :Word .
-:diri :represents :STAND .
-:diri :belongsToLanguage :id .
-
-:tangtung rdf:type :Word .
-:tangtung :represents :STAND .
-:tangtung :belongsToLanguage :su .
-
-:berdiri rdf:type :Word .
-:berdiri :represents :STAND .
-:berdiri :belongsToLanguage :mel .
-
-:belok rdf:type :Word .
-:belok :represents :TURN .
-:belok :belongsToLanguage :id .
-
-:méngkol rdf:type :Word .
-:méngkol :represents :TURN .
-:méngkol :belongsToLanguage :su .
-
-:pusing rdf:type :Word .
-:pusing :represents :TURN .
-:pusing :belongsToLanguage :mel .
-
-:jatuh rdf:type :Word .
-:jatuh :represents :FALL .
-:jatuh :belongsToLanguage :id .
-
-:labuh rdf:type :Word .
-:labuh :represents :FALL .
-:labuh :belongsToLanguage :su .
-
-:jatuh rdf:type :Word .
-:jatuh :represents :FALL .
-:jatuh :belongsToLanguage :mel .
-
-:beri rdf:type :Word .
-:beri :represents :GIVE .
-:beri :belongsToLanguage :id .
-
-:béré rdf:type :Word .
-:béré :represents :GIVE .
-:béré :belongsToLanguage :su .
-
-:kongsi rdf:type :Word .
-:kongsi :represents :GIVE .
-:kongsi :belongsToLanguage :mel .
-
-:pegang rdf:type :Word .
-:pegang :represents :HOLD .
-:pegang :belongsToLanguage :id .
-
-:tahan rdf:type :Word .
-:tahan :represents :HOLD .
-:tahan :belongsToLanguage :su .
-
-:pegang rdf:type :Word .
-:pegang :represents :HOLD .
-:pegang :belongsToLanguage :mel .
-
-:peras rdf:type :Word .
-:peras :represents :SQUEEZE .
-:peras :belongsToLanguage :id .
-
-:peureut rdf:type :Word .
-:peureut :represents :SQUEEZE .
-:peureut :belongsToLanguage :su .
-
-:peras rdf:type :Word .
-:peras :represents :SQUEEZE .
-:peras :belongsToLanguage :mel .
-
-:gosok rdf:type :Word .
-:gosok :represents :RUB .
-:gosok :belongsToLanguage :id .
-
-:gosok rdf:type :Word .
-:gosok :represents :RUB .
-:gosok :belongsToLanguage :su .
-
-:gesel rdf:type :Word .
-:gesel :represents :RUB .
-:gesel :belongsToLanguage :mel .
-
-:cuci rdf:type :Word .
-:cuci :represents :WASH .
-:cuci :belongsToLanguage :id .
-
-:kumbah rdf:type :Word .
-:kumbah :represents :WASH .
-:kumbah :belongsToLanguage :su .
-
-:cuci rdf:type :Word .
-:cuci :represents :WASH .
-:cuci :belongsToLanguage :mel .
-
-:usap rdf:type :Word .
-:usap :represents :WIPE .
-:usap :belongsToLanguage :id .
-
-:hapus rdf:type :Word .
-:hapus :represents :WIPE .
-:hapus :belongsToLanguage :su .
-
-:padam rdf:type :Word .
-:padam :represents :WIPE .
-:padam :belongsToLanguage :mel .
-
-:tarik rdf:type :Word .
-:tarik :represents :PULL .
-:tarik :belongsToLanguage :id .
-
-:betot rdf:type :Word .
-:betot :represents :PULL .
-:betot :belongsToLanguage :su .
-
-:tarik rdf:type :Word .
-:tarik :represents :PULL .
-:tarik :belongsToLanguage :mel .
-
-:dorong rdf:type :Word .
-:dorong :represents :PUSH .
-:dorong :belongsToLanguage :id .
-
-:surung rdf:type :Word .
-:surung :represents :PUSH .
-:surung :belongsToLanguage :su .
-
-:tolak rdf:type :Word .
-:tolak :represents :PUSH .
-:tolak :belongsToLanguage :mel .
-
-:lempar rdf:type :Word .
-:lempar :represents :THROW .
-:lempar :belongsToLanguage :id .
-
-:alung rdf:type :Word .
-:alung :represents :THROW .
-:alung :belongsToLanguage :su .
-
-:buang rdf:type :Word .
-:buang :represents :THROW .
-:buang :belongsToLanguage :mel .
-
-:ikat rdf:type :Word .
-:ikat :represents :TIE .
-:ikat :belongsToLanguage :id .
-
-:beungkeut rdf:type :Word .
-:beungkeut :represents :TIE .
-:beungkeut :belongsToLanguage :su .
-
-:hikat rdf:type :Word .
-:hikat :represents :TIE .
-:hikat :belongsToLanguage :mel .
-
-:jahit rdf:type :Word .
-:jahit :represents :SEW .
-:jahit :belongsToLanguage :id .
-
-:kaput rdf:type :Word .
-:kaput :represents :SEW .
-:kaput :belongsToLanguage :su .
-
-:jahit rdf:type :Word .
-:jahit :represents :SEW .
-:jahit :belongsToLanguage :mel .
-
-:hitung rdf:type :Word .
-:hitung :represents :COUNT .
-:hitung :belongsToLanguage :id .
-
-:itung rdf:type :Word .
-:itung :represents :COUNT .
-:itung :belongsToLanguage :su .
-
-:kire rdf:type :Word .
-:kire :represents :COUNT .
-:kire :belongsToLanguage :mel .
-
-:berkata rdf:type :Word .
-:berkata :represents :SAY .
-:berkata :belongsToLanguage :id .
-
-:nyarita rdf:type :Word .
-:nyarita :represents :SAY .
-:nyarita :belongsToLanguage :su .
-
-:cakap rdf:type :Word .
-:cakap :represents :SAY .
-:cakap :belongsToLanguage :mel .
-
-:bernyanyi rdf:type :Word .
-:bernyanyi :represents :SING .
-:bernyanyi :belongsToLanguage :id .
-
-:nyanyi rdf:type :Word .
-:nyanyi :represents :SING .
-:nyanyi :belongsToLanguage :su .
-
-:menyanyi rdf:type :Word .
-:menyanyi :represents :SING .
-:menyanyi :belongsToLanguage :mel .
-
-:bermain rdf:type :Word .
-:bermain :represents :PLAY .
-:bermain :belongsToLanguage :id .
-
-:ulin rdf:type :Word .
-:ulin :represents :PLAY .
-:ulin :belongsToLanguage :su .
-
-:main rdf:type :Word .
-:main :represents :PLAY .
-:main :belongsToLanguage :mel .
-
-:mengapung rdf:type :Word .
-:mengapung :represents :FLOAT .
-:mengapung :belongsToLanguage :id .
-
-:ambang rdf:type :Word .
-:ambang :represents :FLOAT .
-:ambang :belongsToLanguage :su .
-
-:terapung rdf:type :Word .
-:terapung :represents :FLOAT .
-:terapung :belongsToLanguage :mel .
-
-:mengalir rdf:type :Word .
-:mengalir :represents :FLOW .
-:mengalir :belongsToLanguage :id .
-
-:palid rdf:type :Word .
-:palid :represents :FLOW .
-:palid :belongsToLanguage :su .
-
-:mengalir rdf:type :Word .
-:mengalir :represents :FLOW .
-:mengalir :belongsToLanguage :mel .
-
-:membeku rdf:type :Word .
-:membeku :represents :FREEZE .
-:membeku :belongsToLanguage :id .
-
-:beku rdf:type :Word .
-:beku :represents :FREEZE .
-:beku :belongsToLanguage :su .
-
-:beku rdf:type :Word .
-:beku :represents :FREEZE .
-:beku :belongsToLanguage :mel .
-
-:membengkak rdf:type :Word .
-:membengkak :represents :SWELL .
-:membengkak :belongsToLanguage :id .
-
-:bareuh rdf:type :Word .
-:bareuh :represents :SWELL .
-:bareuh :belongsToLanguage :su .
-
-:bengkak rdf:type :Word .
-:bengkak :represents :SWELL .
-:bengkak :belongsToLanguage :mel .
-
-:matahari rdf:type :Word .
-:matahari :represents :SUN .
-:matahari :belongsToLanguage :id .
-
-:panonpoé rdf:type :Word .
-:panonpoé :represents :SUN .
-:panonpoé :belongsToLanguage :su .
-
-:matahari rdf:type :Word .
-:matahari :represents :SUN .
-:matahari :belongsToLanguage :mel .
-
-:bulan rdf:type :Word .
-:bulan :represents :MOON .
-:bulan :belongsToLanguage :id .
-
-:bulan rdf:type :Word .
-:bulan :represents :MOON .
-:bulan :belongsToLanguage :su .
-
-:bulan rdf:type :Word .
-:bulan :represents :MOON .
-:bulan :belongsToLanguage :mel .
-
-:bintang rdf:type :Word .
-:bintang :represents :STAR .
-:bintang :belongsToLanguage :id .
-
-:béntang rdf:type :Word .
-:béntang :represents :STAR .
-:béntang :belongsToLanguage :su .
-
-:bintang rdf:type :Word .
-:bintang :represents :STAR .
-:bintang :belongsToLanguage :mel .
-
-:air rdf:type :Word .
-:air :represents :WATER .
-:air :belongsToLanguage :id .
-
-:cai rdf:type :Word .
-:cai :represents :WATER .
-:cai :belongsToLanguage :su .
-
-:air rdf:type :Word .
-:air :represents :WATER .
-:air :belongsToLanguage :mel .
-
-:hujan rdf:type :Word .
-:hujan :represents :RAIN .
-:hujan :belongsToLanguage :id .
-
-:hujan rdf:type :Word .
-:hujan :represents :RAIN .
-:hujan :belongsToLanguage :su .
-
-:hujan rdf:type :Word .
-:hujan :represents :RAIN .
-:hujan :belongsToLanguage :mel .
-
-:sungai rdf:type :Word .
-:sungai :represents :RIVER .
-:sungai :belongsToLanguage :id .
-
-:walungan rdf:type :Word .
-:walungan :represents :RIVER .
-:walungan :belongsToLanguage :su .
-
-:sungai rdf:type :Word .
-:sungai :represents :RIVER .
-:sungai :belongsToLanguage :mel .
-
-:danau rdf:type :Word .
-:danau :represents :LAKE .
-:danau :belongsToLanguage :id .
-
-:situ rdf:type :Word .
-:situ :represents :LAKE .
-:situ :belongsToLanguage :su .
-
-:tasik rdf:type :Word .
-:tasik :represents :LAKE .
-:tasik :belongsToLanguage :mel .
-
-:laut rdf:type :Word .
-:laut :represents :SEA .
-:laut :belongsToLanguage :id .
-
-:sagara rdf:type :Word .
-:sagara :represents :SEA .
-:sagara :belongsToLanguage :su .
-
-:laut rdf:type :Word .
-:laut :represents :SEA .
-:laut :belongsToLanguage :mel .
-
-:garam rdf:type :Word .
-:garam :represents :SALT .
-:garam :belongsToLanguage :id .
-
-:uyah rdf:type :Word .
-:uyah :represents :SALT .
-:uyah :belongsToLanguage :su .
-
-:garam rdf:type :Word .
-:garam :represents :SALT .
-:garam :belongsToLanguage :mel .
-
-:batu rdf:type :Word .
-:batu :represents :STONE .
-:batu :belongsToLanguage :id .
-
-:batu rdf:type :Word .
-:batu :represents :STONE .
-:batu :belongsToLanguage :su .
-
-:batu rdf:type :Word .
-:batu :represents :STONE .
-:batu :belongsToLanguage :mel .
-
-:pasir rdf:type :Word .
-:pasir :represents :SAND .
-:pasir :belongsToLanguage :id .
-
-:keusik rdf:type :Word .
-:keusik :represents :SAND .
-:keusik :belongsToLanguage :su .
-
-:pasir rdf:type :Word .
-:pasir :represents :SAND .
-:pasir :belongsToLanguage :mel .
-
-:debu rdf:type :Word .
-:debu :represents :DUST .
-:debu :belongsToLanguage :id .
-
-:kebul rdf:type :Word .
-:kebul :represents :DUST .
-:kebul :belongsToLanguage :su .
-
-:debu rdf:type :Word .
-:debu :represents :DUST .
-:debu :belongsToLanguage :mel .
-
-:bumi rdf:type :Word .
-:bumi :represents :EARTH .
-:bumi :belongsToLanguage :id .
-
-:marcapada rdf:type :Word .
-:marcapada :represents :EARTH .
-:marcapada :belongsToLanguage :su .
-
-:bumi rdf:type :Word .
-:bumi :represents :EARTH .
-:bumi :belongsToLanguage :mel .
-
-:awan rdf:type :Word .
-:awan :represents :CLOUD .
-:awan :belongsToLanguage :id .
-
-:méga rdf:type :Word .
-:méga :represents :CLOUD .
-:méga :belongsToLanguage :su .
-
-:awan rdf:type :Word .
-:awan :represents :CLOUD .
-:awan :belongsToLanguage :mel .
-
-:kabut rdf:type :Word .
-:kabut :represents :FOG .
-:kabut :belongsToLanguage :id .
-
-:halimun rdf:type :Word .
-:halimun :represents :FOG .
-:halimun :belongsToLanguage :su .
-
-:kabut rdf:type :Word .
-:kabut :represents :FOG .
-:kabut :belongsToLanguage :mel .
-
-:langit rdf:type :Word .
-:langit :represents :SKY .
-:langit :belongsToLanguage :id .
-
-:langit rdf:type :Word .
-:langit :represents :SKY .
-:langit :belongsToLanguage :su .
-
-:langit rdf:type :Word .
-:langit :represents :SKY .
-:langit :belongsToLanguage :mel .
-
-:angin rdf:type :Word .
-:angin :represents :WIND .
-:angin :belongsToLanguage :id .
-
-:angin rdf:type :Word .
-:angin :represents :WIND .
-:angin :belongsToLanguage :su .
-
-:angin rdf:type :Word .
-:angin :represents :WIND .
-:angin :belongsToLanguage :mel .
-
-:salju rdf:type :Word .
-:salju :represents :SNOW .
-:salju :belongsToLanguage :id .
-
-:salju rdf:type :Word .
-:salju :represents :SNOW .
-:salju :belongsToLanguage :su .
-
-:salji rdf:type :Word .
-:salji :represents :SNOW .
-:salji :belongsToLanguage :mel .
-
-:es rdf:type :Word .
-:es :represents :ICE .
-:es :belongsToLanguage :id .
-
-:és rdf:type :Word .
-:és :represents :ICE .
-:és :belongsToLanguage :su .
-
-:ais rdf:type :Word .
-:ais :represents :ICE .
-:ais :belongsToLanguage :mel .
-
-:asap rdf:type :Word .
-:asap :represents :SMOKE .
-:asap :belongsToLanguage :id .
-
-:haseup rdf:type :Word .
-:haseup :represents :SMOKE .
-:haseup :belongsToLanguage :su .
-
-:asap rdf:type :Word .
-:asap :represents :SMOKE .
-:asap :belongsToLanguage :mel .
-
-:api rdf:type :Word .
-:api :represents :FIRE .
-:api :belongsToLanguage :id .
-
-:seuneu rdf:type :Word .
-:seuneu :represents :FIRE .
-:seuneu :belongsToLanguage :su .
-
-:api rdf:type :Word .
-:api :represents :FIRE .
-:api :belongsToLanguage :mel .
-
-:abu rdf:type :Word .
-:abu :represents :ASHES .
-:abu :belongsToLanguage :id .
-
-:lebu rdf:type :Word .
-:lebu :represents :ASHES .
-:lebu :belongsToLanguage :su .
-
-:abu rdf:type :Word .
-:abu :represents :ASHES .
-:abu :belongsToLanguage :mel .
-
-:bakar rdf:type :Word .
-:bakar :represents :BURN .
-:bakar :belongsToLanguage :id .
-
-:duruk rdf:type :Word .
-:duruk :represents :BURN .
-:duruk :belongsToLanguage :su .
-
-:bakar rdf:type :Word .
-:bakar :represents :BURN .
-:bakar :belongsToLanguage :mel .
-
-:jalan rdf:type :Word .
-:jalan :represents :ROAD .
-:jalan :belongsToLanguage :id .
-
-:jalan rdf:type :Word .
-:jalan :represents :ROAD .
-:jalan :belongsToLanguage :su .
-
-:jalan rdf:type :Word .
-:jalan :represents :ROAD .
-:jalan :belongsToLanguage :mel .
-
-:gunung rdf:type :Word .
-:gunung :represents :MOUNTAIN .
-:gunung :belongsToLanguage :id .
-
-:gunung rdf:type :Word .
-:gunung :represents :MOUNTAIN .
-:gunung :belongsToLanguage :su .
-
-:gunung rdf:type :Word .
-:gunung :represents :MOUNTAIN .
-:gunung :belongsToLanguage :mel .
-
-:merah rdf:type :Word .
-:merah :represents :RED .
-:merah :belongsToLanguage :id .
-
-:beureum rdf:type :Word .
-:beureum :represents :RED .
-:beureum :belongsToLanguage :su .
-
-:merah rdf:type :Word .
-:merah :represents :RED .
-:merah :belongsToLanguage :mel .
-
-:hijau rdf:type :Word .
-:hijau :represents :GREEN .
-:hijau :belongsToLanguage :id .
-
-:héjo rdf:type :Word .
-:héjo :represents :GREEN .
-:héjo :belongsToLanguage :su .
-
-:hijau rdf:type :Word .
-:hijau :represents :GREEN .
-:hijau :belongsToLanguage :mel .
-
-:kuning rdf:type :Word .
-:kuning :represents :YELLOW .
-:kuning :belongsToLanguage :id .
-
-:konéng rdf:type :Word .
-:konéng :represents :YELLOW .
-:konéng :belongsToLanguage :su .
-
-:kuning rdf:type :Word .
-:kuning :represents :YELLOW .
-:kuning :belongsToLanguage :mel .
-
-:putih rdf:type :Word .
-:putih :represents :WHITE .
-:putih :belongsToLanguage :id .
-
-:bodas rdf:type :Word .
-:bodas :represents :WHITE .
-:bodas :belongsToLanguage :su .
-
-:putih rdf:type :Word .
-:putih :represents :WHITE .
-:putih :belongsToLanguage :mel .
-
-:hitam rdf:type :Word .
-:hitam :represents :BLACK .
-:hitam :belongsToLanguage :id .
-
-:hideung rdf:type :Word .
-:hideung :represents :BLACK .
-:hideung :belongsToLanguage :su .
-
-:hitam rdf:type :Word .
-:hitam :represents :BLACK .
-:hitam :belongsToLanguage :mel .
-
-:malam rdf:type :Word .
-:malam :represents :NIGHT .
-:malam :belongsToLanguage :id .
-
-:peuting rdf:type :Word .
-:peuting :represents :NIGHT .
-:peuting :belongsToLanguage :su .
-
-:malam rdf:type :Word .
-:malam :represents :NIGHT .
-:malam :belongsToLanguage :mel .
-
-:hari rdf:type :Word .
-:hari :represents :DAY .
-:hari :belongsToLanguage :id .
-
-:poé rdf:type :Word .
-:poé :represents :DAY .
-:poé :belongsToLanguage :su .
-
-:hari rdf:type :Word .
-:hari :represents :DAY .
-:hari :belongsToLanguage :mel .
-
-:tahun rdf:type :Word .
-:tahun :represents :YEAR .
-:tahun :belongsToLanguage :id .
-
-:taun rdf:type :Word .
-:taun :represents :YEAR .
-:taun :belongsToLanguage :su .
-
-:tahun rdf:type :Word .
-:tahun :represents :YEAR .
-:tahun :belongsToLanguage :mel .
-
-:hangat rdf:type :Word .
-:hangat :represents :WARM .
-:hangat :belongsToLanguage :id .
-
-:haneut rdf:type :Word .
-:haneut :represents :WARM .
-:haneut :belongsToLanguage :su .
-
-:hangat rdf:type :Word .
-:hangat :represents :WARM .
-:hangat :belongsToLanguage :mel .
-
-:dingin rdf:type :Word .
-:dingin :represents :COLD .
-:dingin :belongsToLanguage :id .
-
-:tiis rdf:type :Word .
-:tiis :represents :COLD .
-:tiis :belongsToLanguage :su .
-
-:sejuk rdf:type :Word .
-:sejuk :represents :COLD .
-:sejuk :belongsToLanguage :mel .
-
-:penuh rdf:type :Word .
-:penuh :represents :FULL .
-:penuh :belongsToLanguage :id .
-
-:pinuh rdf:type :Word .
-:pinuh :represents :FULL .
-:pinuh :belongsToLanguage :su .
-
-:penuh rdf:type :Word .
-:penuh :represents :FULL .
-:penuh :belongsToLanguage :mel .
-
-:baru rdf:type :Word .
-:baru :represents :NEW .
-:baru :belongsToLanguage :id .
-
-:anyar rdf:type :Word .
-:anyar :represents :NEW .
-:anyar :belongsToLanguage :su .
-
-:baru rdf:type :Word .
-:baru :represents :NEW .
-:baru :belongsToLanguage :mel .
-
-:lama rdf:type :Word .
-:lama :represents :OLD .
-:lama :belongsToLanguage :id .
-
-:heubeul rdf:type :Word .
-:heubeul :represents :OLD .
-:heubeul :belongsToLanguage :su .
-
-:lame rdf:type :Word .
-:lame :represents :OLD .
-:lame :belongsToLanguage :mel .
-
-:baik rdf:type :Word .
-:baik :represents :GOOD .
-:baik :belongsToLanguage :id .
-
-:alus rdf:type :Word .
-:alus :represents :GOOD .
-:alus :belongsToLanguage :su .
-
-:bagus rdf:type :Word .
-:bagus :represents :GOOD .
-:bagus :belongsToLanguage :mel .
-
-:buruk rdf:type :Word .
-:buruk :represents :BAD .
-:buruk :belongsToLanguage :id .
-
-:goréng rdf:type :Word .
-:goréng :represents :BAD .
-:goréng :belongsToLanguage :su .
-
-:buruk rdf:type :Word .
-:buruk :represents :BAD .
-:buruk :belongsToLanguage :mel .
-
-:busuk rdf:type :Word .
-:busuk :represents :ROTTEN .
-:busuk :belongsToLanguage :id .
-
-:buruk rdf:type :Word .
-:buruk :represents :ROTTEN .
-:buruk :belongsToLanguage :su .
-
-:busuk rdf:type :Word .
-:busuk :represents :ROTTEN .
-:busuk :belongsToLanguage :mel .
-
-:kotor rdf:type :Word .
-:kotor :represents :DIRTY .
-:kotor :belongsToLanguage :id .
-
-:bagedur rdf:type :Word .
-:bagedur :represents :DIRTY .
-:bagedur :belongsToLanguage :su .
-
-:kotor rdf:type :Word .
-:kotor :represents :DIRTY .
-:kotor :belongsToLanguage :mel .
-
-:lurus rdf:type :Word .
-:lurus :represents :STRAIGHT .
-:lurus :belongsToLanguage :id .
-
-:lempeng rdf:type :Word .
-:lempeng :represents :STRAIGHT .
-:lempeng :belongsToLanguage :su .
-
-:lurus rdf:type :Word .
-:lurus :represents :STRAIGHT .
-:lurus :belongsToLanguage :mel .
-
-:bulat rdf:type :Word .
-:bulat :represents :ROUND .
-:bulat :belongsToLanguage :id .
-
-:buleud rdf:type :Word .
-:buleud :represents :ROUND .
-:buleud :belongsToLanguage :su .
-
-:bulat rdf:type :Word .
-:bulat :represents :ROUND .
-:bulat :belongsToLanguage :mel .
-
-:tajam rdf:type :Word .
-:tajam :represents :SHARP .
-:tajam :belongsToLanguage :id .
-
-:seukeut rdf:type :Word .
-:seukeut :represents :SHARP .
-:seukeut :belongsToLanguage :su .
-
-:tajam rdf:type :Word .
-:tajam :represents :SHARP .
-:tajam :belongsToLanguage :mel .
-
-:tumpul rdf:type :Word .
-:tumpul :represents :DULL .
-:tumpul :belongsToLanguage :id .
-
-:mintul rdf:type :Word .
-:mintul :represents :DULL .
-:mintul :belongsToLanguage :su .
-
-:tumpul rdf:type :Word .
-:tumpul :represents :DULL .
-:tumpul :belongsToLanguage :mel .
-
-:licin rdf:type :Word .
-:licin :represents :SMOOTH .
-:licin :belongsToLanguage :id .
-
-:lésang rdf:type :Word .
-:lésang :represents :SMOOTH .
-:lésang :belongsToLanguage :su .
-
-:licin rdf:type :Word .
-:licin :represents :SMOOTH .
-:licin :belongsToLanguage :mel .
-
-:basah rdf:type :Word .
-:basah :represents :WET .
-:basah :belongsToLanguage :id .
-
-:baseuh rdf:type :Word .
-:baseuh :represents :WET .
-:baseuh :belongsToLanguage :su .
-
-:basah rdf:type :Word .
-:basah :represents :WET .
-:basah :belongsToLanguage :mel .
-
-:kering rdf:type :Word .
-:kering :represents :DRY .
-:kering :belongsToLanguage :id .
-
-:garing rdf:type :Word .
-:garing :represents :DRY .
-:garing :belongsToLanguage :su .
-
-:kering rdf:type :Word .
-:kering :represents :DRY .
-:kering :belongsToLanguage :mel .
-
-:betul rdf:type :Word .
-:betul :represents :CORRECT .
-:betul :belongsToLanguage :id .
-
-:bener rdf:type :Word .
-:bener :represents :CORRECT .
-:bener :belongsToLanguage :su .
-
-:betul rdf:type :Word .
-:betul :represents :CORRECT .
-:betul :belongsToLanguage :mel .
-
-:dekat rdf:type :Word .
-:dekat :represents :NEAR .
-:dekat :belongsToLanguage :id .
-
-:deukeut rdf:type :Word .
-:deukeut :represents :NEAR .
-:deukeut :belongsToLanguage :su .
-
-:dekat rdf:type :Word .
-:dekat :represents :NEAR .
-:dekat :belongsToLanguage :mel .
-
-:jauh rdf:type :Word .
-:jauh :represents :FAR .
-:jauh :belongsToLanguage :id .
-
-:jauh rdf:type :Word .
-:jauh :represents :FAR .
-:jauh :belongsToLanguage :su .
-
-:jauh rdf:type :Word .
-:jauh :represents :FAR .
-:jauh :belongsToLanguage :mel .
-
-:kanan rdf:type :Word .
-:kanan :represents :RIGHT .
-:kanan :belongsToLanguage :id .
-
-:katuhu rdf:type :Word .
-:katuhu :represents :RIGHT .
-:katuhu :belongsToLanguage :su .
-
-:kanan rdf:type :Word .
-:kanan :represents :RIGHT .
-:kanan :belongsToLanguage :mel .
-
-:kiri rdf:type :Word .
-:kiri :represents :LEFT .
-:kiri :belongsToLanguage :id .
-
-:kénca rdf:type :Word .
-:kénca :represents :LEFT .
-:kénca :belongsToLanguage :su .
-
-:kiri rdf:type :Word .
-:kiri :represents :LEFT .
-:kiri :belongsToLanguage :mel .
-
-:di rdf:type :Word .
-:di :represents :AT .
-:di :belongsToLanguage :id .
-
-:di rdf:type :Word .
-:di :represents :AT .
-:di :belongsToLanguage :su .
-
-:di rdf:type :Word .
-:di :represents :AT .
-:di :belongsToLanguage :mel .
-
-:dalam rdf:type :Word .
-:dalam :represents :IN .
-:dalam :belongsToLanguage :id .
-
-:jero rdf:type :Word .
-:jero :represents :IN .
-:jero :belongsToLanguage :su .
-
-:dalam rdf:type :Word .
-:dalam :represents :IN .
-:dalam :belongsToLanguage :mel .
-
-:dengan rdf:type :Word .
-:dengan :represents :WITH .
-:dengan :belongsToLanguage :id .
-
-:jeung rdf:type :Word .
-:jeung :represents :WITH .
-:jeung :belongsToLanguage :su .
-
-:dengan rdf:type :Word .
-:dengan :represents :WITH .
-:dengan :belongsToLanguage :mel .
-
-:dan rdf:type :Word .
-:dan :represents :AND .
-:dan :belongsToLanguage :id .
-
-:jeung rdf:type :Word .
-:jeung :represents :AND .
-:jeung :belongsToLanguage :su .
-
-:dan rdf:type :Word .
-:dan :represents :AND .
-:dan :belongsToLanguage :mel .
-
-:kalau rdf:type :Word .
-:kalau :represents :IF .
-:kalau :belongsToLanguage :id .
-
-:lamun rdf:type :Word .
-:lamun :represents :IF .
-:lamun :belongsToLanguage :su .
-
-:kalau rdf:type :Word .
-:kalau :represents :IF .
-:kalau :belongsToLanguage :mel .
-
-:karena rdf:type :Word .
-:karena :represents :BECAUSE .
-:karena :belongsToLanguage :id .
-
-:ku_sabab rdf:type :Word .
-:ku_sabab :represents :BECAUSE .
-:ku_sabab :belongsToLanguage :su .
-
-:sebab rdf:type :Word .
-:sebab :represents :BECAUSE .
-:sebab :belongsToLanguage :mel .
-
-:nama rdf:type :Word .
-:nama :represents :NAME .
-:nama :belongsToLanguage :id .
-
-:aran rdf:type :Word .
-:aran :represents :NAME .
-:aran :belongsToLanguage :su .
-
-:nama rdf:type :Word .
-:nama :represents :NAME .
-:nama :belongsToLanguage :mel .
-
-
-:id :spokenInRegion :Indonesia .
-:su :spokenInRegion :Jawa_Barat .
-:mel :spokenInRegion :Sumatra_dan_Semenanjung_Malaya .
-
-:Indonesia rdf:type :Region .
-:Jawa_Barat rdf:type :Region .
-:Sumatra_dan_Semenanjung_Malaya rdf:type :Region .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# =================================================================
+# Individuals: Languages (Data Bahasa Tetap)
+# =================================================================
+:id rdf:type :Language , owl:NamedIndividual ; rdfs:label "Indonesian" .
+:su rdf:type :Language , owl:NamedIndividual ; rdfs:label "Sundanese" .
+:mel rdf:type :Language , owl:NamedIndividual ; rdfs:label "Malay" .
+
+# =================================================================
+# Individuals: Concepts & Words (Generated otomatis dari CSV)
+# =================================================================
+
+# --- Daftar Konsep ---
+:C001 rdf:type :Concept , owl:NamedIndividual ; :conceptName "I" .
+:C002 rdf:type :Concept , owl:NamedIndividual ; :conceptName "YOU_SINGLE" .
+:C003 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HE" .
+:C004 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SHE" .
+:C005 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WE" .
+:C006 rdf:type :Concept , owl:NamedIndividual ; :conceptName "YOU_PLURAL" .
+:C007 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THEY" .
+:C008 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THIS" .
+:C009 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THAT" .
+:C010 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HERE" .
+:C011 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THERE" .
+:C012 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WHO" .
+:C013 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WHAT" .
+:C014 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WHERE" .
+:C015 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WHEN" .
+:C016 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HOW" .
+:C017 rdf:type :Concept , owl:NamedIndividual ; :conceptName "NOT" .
+:C018 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ALL" .
+:C019 rdf:type :Concept , owl:NamedIndividual ; :conceptName "MANY" .
+:C020 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SOME" .
+:C021 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FEW" .
+:C022 rdf:type :Concept , owl:NamedIndividual ; :conceptName "OTHER" .
+:C023 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ONE" .
+:C024 rdf:type :Concept , owl:NamedIndividual ; :conceptName "TWO" .
+:C025 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THREE" .
+:C026 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FOUR" .
+:C027 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FIVE" .
+:C028 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BIG" .
+:C029 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LONG" .
+:C030 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WIDE" .
+:C031 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THICK" .
+:C032 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HEAVY" .
+:C033 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SMALL" .
+:C034 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SHORT" .
+:C035 rdf:type :Concept , owl:NamedIndividual ; :conceptName "NARROW" .
+:C036 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THIN" .
+:C037 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WOMAN" .
+:C038 rdf:type :Concept , owl:NamedIndividual ; :conceptName "MAN_ADULT_MALE" .
+:C039 rdf:type :Concept , owl:NamedIndividual ; :conceptName "MAN_HUMAN_BEING" .
+:C040 rdf:type :Concept , owl:NamedIndividual ; :conceptName "CHILD" .
+:C041 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WIFE" .
+:C042 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HUSBAND" .
+:C043 rdf:type :Concept , owl:NamedIndividual ; :conceptName "MOTHER" .
+:C044 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FATHER" .
+:C045 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ANIMAL" .
+:C046 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FISH" .
+:C047 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BIRD" .
+:C048 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DOG" .
+:C049 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LOUSE" .
+:C050 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SNAKE" .
+:C051 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WORM" .
+:C052 rdf:type :Concept , owl:NamedIndividual ; :conceptName "TREE" .
+:C053 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FOREST" .
+:C054 rdf:type :Concept , owl:NamedIndividual ; :conceptName "STICK" .
+:C055 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FRUIT" .
+:C056 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SEED" .
+:C057 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LEAF" .
+:C058 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ROOT" .
+:C059 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BARK" .
+:C060 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FLOWER" .
+:C061 rdf:type :Concept , owl:NamedIndividual ; :conceptName "GRASS" .
+:C062 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ROPE" .
+:C063 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SKIN" .
+:C064 rdf:type :Concept , owl:NamedIndividual ; :conceptName "MEAT" .
+:C065 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BLOOD" .
+:C066 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BONE" .
+:C067 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FAT_NOUN" .
+:C068 rdf:type :Concept , owl:NamedIndividual ; :conceptName "EGG" .
+:C069 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HORN" .
+:C070 rdf:type :Concept , owl:NamedIndividual ; :conceptName "TAIL" .
+:C071 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FEATHER" .
+:C072 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HAIR" .
+:C073 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HEAD" .
+:C074 rdf:type :Concept , owl:NamedIndividual ; :conceptName "EAR" .
+:C075 rdf:type :Concept , owl:NamedIndividual ; :conceptName "EYE" .
+:C076 rdf:type :Concept , owl:NamedIndividual ; :conceptName "NOSE" .
+:C077 rdf:type :Concept , owl:NamedIndividual ; :conceptName "MOUTH" .
+:C078 rdf:type :Concept , owl:NamedIndividual ; :conceptName "TOOTH" .
+:C079 rdf:type :Concept , owl:NamedIndividual ; :conceptName "TONGUE" .
+:C080 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FINGERNAIL" .
+:C081 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FOOT" .
+:C082 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LEG" .
+:C083 rdf:type :Concept , owl:NamedIndividual ; :conceptName "KNEE" .
+:C084 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HAND" .
+:C085 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WING" .
+:C086 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BELLY" .
+:C087 rdf:type :Concept , owl:NamedIndividual ; :conceptName "GUTS" .
+:C088 rdf:type :Concept , owl:NamedIndividual ; :conceptName "NECK" .
+:C089 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BACK" .
+:C090 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BREAST" .
+:C091 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HEART" .
+:C092 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LIVER" .
+:C093 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DRINK" .
+:C094 rdf:type :Concept , owl:NamedIndividual ; :conceptName "EAT" .
+:C095 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BITE" .
+:C096 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SUCK" .
+:C097 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SPIT" .
+:C098 rdf:type :Concept , owl:NamedIndividual ; :conceptName "VOMIT" .
+:C099 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BLOW" .
+:C100 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BREATHE" .
+:C101 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LAUGH" .
+:C102 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SEE" .
+:C103 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HEAR" .
+:C104 rdf:type :Concept , owl:NamedIndividual ; :conceptName "KNOW" .
+:C105 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THINK" .
+:C106 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SMELL" .
+:C107 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FEAR" .
+:C108 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SLEEP" .
+:C109 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LIVE" .
+:C110 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DIE" .
+:C111 rdf:type :Concept , owl:NamedIndividual ; :conceptName "KILL" .
+:C112 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FIGHT" .
+:C113 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HUNT" .
+:C114 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HIT" .
+:C115 rdf:type :Concept , owl:NamedIndividual ; :conceptName "CUT" .
+:C116 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SPLIT" .
+:C117 rdf:type :Concept , owl:NamedIndividual ; :conceptName "STAB" .
+:C118 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SCRATCH" .
+:C119 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DIG" .
+:C120 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SWIM" .
+:C121 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FLY" .
+:C122 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WALK" .
+:C123 rdf:type :Concept , owl:NamedIndividual ; :conceptName "COME" .
+:C124 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LIE" .
+:C125 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SIT" .
+:C126 rdf:type :Concept , owl:NamedIndividual ; :conceptName "STAND" .
+:C127 rdf:type :Concept , owl:NamedIndividual ; :conceptName "TURN" .
+:C128 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FALL" .
+:C129 rdf:type :Concept , owl:NamedIndividual ; :conceptName "GIVE" .
+:C130 rdf:type :Concept , owl:NamedIndividual ; :conceptName "HOLD" .
+:C131 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SQUEEZE" .
+:C132 rdf:type :Concept , owl:NamedIndividual ; :conceptName "RUB" .
+:C133 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WASH" .
+:C134 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WIPE" .
+:C135 rdf:type :Concept , owl:NamedIndividual ; :conceptName "PULL" .
+:C136 rdf:type :Concept , owl:NamedIndividual ; :conceptName "PUSH" .
+:C137 rdf:type :Concept , owl:NamedIndividual ; :conceptName "THROW" .
+:C138 rdf:type :Concept , owl:NamedIndividual ; :conceptName "TIE" .
+:C139 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SEW" .
+:C140 rdf:type :Concept , owl:NamedIndividual ; :conceptName "COUNT" .
+:C141 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SAY" .
+:C142 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SING" .
+:C143 rdf:type :Concept , owl:NamedIndividual ; :conceptName "PLAY" .
+:C144 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FLOAT" .
+:C145 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FLOW" .
+:C146 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FREEZE" .
+:C147 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SWELL" .
+:C148 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SUN" .
+:C149 rdf:type :Concept , owl:NamedIndividual ; :conceptName "MOON" .
+:C150 rdf:type :Concept , owl:NamedIndividual ; :conceptName "STAR" .
+:C151 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WATER" .
+:C152 rdf:type :Concept , owl:NamedIndividual ; :conceptName "RAIN" .
+:C153 rdf:type :Concept , owl:NamedIndividual ; :conceptName "RIVER" .
+:C154 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LAKE" .
+:C155 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SEA" .
+:C156 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SALT" .
+:C157 rdf:type :Concept , owl:NamedIndividual ; :conceptName "STONE" .
+:C158 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SAND" .
+:C159 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DUST" .
+:C160 rdf:type :Concept , owl:NamedIndividual ; :conceptName "EARTH" .
+:C161 rdf:type :Concept , owl:NamedIndividual ; :conceptName "CLOUD" .
+:C162 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FOG" .
+:C163 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SKY" .
+:C164 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WIND" .
+:C165 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SNOW" .
+:C166 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ICE" .
+:C167 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SMOKE" .
+:C168 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FIRE" .
+:C169 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ASHES" .
+:C170 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BURN" .
+:C171 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ROAD" .
+:C172 rdf:type :Concept , owl:NamedIndividual ; :conceptName "MOUNTAIN" .
+:C173 rdf:type :Concept , owl:NamedIndividual ; :conceptName "RED" .
+:C174 rdf:type :Concept , owl:NamedIndividual ; :conceptName "GREEN" .
+:C175 rdf:type :Concept , owl:NamedIndividual ; :conceptName "YELLOW" .
+:C176 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WHITE" .
+:C177 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BLACK" .
+:C178 rdf:type :Concept , owl:NamedIndividual ; :conceptName "NIGHT" .
+:C179 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DAY" .
+:C180 rdf:type :Concept , owl:NamedIndividual ; :conceptName "YEAR" .
+:C181 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WARM" .
+:C182 rdf:type :Concept , owl:NamedIndividual ; :conceptName "COLD" .
+:C183 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FULL" .
+:C184 rdf:type :Concept , owl:NamedIndividual ; :conceptName "NEW" .
+:C185 rdf:type :Concept , owl:NamedIndividual ; :conceptName "OLD" .
+:C186 rdf:type :Concept , owl:NamedIndividual ; :conceptName "GOOD" .
+:C187 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BAD" .
+:C188 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ROTTEN" .
+:C189 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DIRTY" .
+:C190 rdf:type :Concept , owl:NamedIndividual ; :conceptName "STRAIGHT" .
+:C191 rdf:type :Concept , owl:NamedIndividual ; :conceptName "ROUND" .
+:C192 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SHARP" .
+:C193 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DULL" .
+:C194 rdf:type :Concept , owl:NamedIndividual ; :conceptName "SMOOTH" .
+:C195 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WET" .
+:C196 rdf:type :Concept , owl:NamedIndividual ; :conceptName "DRY" .
+:C197 rdf:type :Concept , owl:NamedIndividual ; :conceptName "CORRECT" .
+:C198 rdf:type :Concept , owl:NamedIndividual ; :conceptName "NEAR" .
+:C199 rdf:type :Concept , owl:NamedIndividual ; :conceptName "FAR" .
+:C200 rdf:type :Concept , owl:NamedIndividual ; :conceptName "RIGHT" .
+:C201 rdf:type :Concept , owl:NamedIndividual ; :conceptName "LEFT" .
+:C202 rdf:type :Concept , owl:NamedIndividual ; :conceptName "AT" .
+:C203 rdf:type :Concept , owl:NamedIndividual ; :conceptName "IN" .
+:C204 rdf:type :Concept , owl:NamedIndividual ; :conceptName "WITH" .
+:C205 rdf:type :Concept , owl:NamedIndividual ; :conceptName "AND" .
+:C206 rdf:type :Concept , owl:NamedIndividual ; :conceptName "IF" .
+:C207 rdf:type :Concept , owl:NamedIndividual ; :conceptName "BECAUSE" .
+:C208 rdf:type :Concept , owl:NamedIndividual ; :conceptName "NAME" .
+
+# --- Daftar Kata Swadesh ---
+:W1 rdf:type :Word , owl:NamedIndividual ; :wordValue "aku" ; :represents :C001 ; :belongsToLanguage :id .
+:W2 rdf:type :Word , owl:NamedIndividual ; :wordValue "kuring" ; :represents :C001 ; :belongsToLanguage :su .
+:W3 rdf:type :Word , owl:NamedIndividual ; :wordValue "saye" ; :represents :C001 ; :belongsToLanguage :mel .
+:W4 rdf:type :Word , owl:NamedIndividual ; :wordValue "kamu" ; :represents :C002 ; :belongsToLanguage :id .
+:W5 rdf:type :Word , owl:NamedIndividual ; :wordValue "manéh" ; :represents :C002 ; :belongsToLanguage :su .
+:W6 rdf:type :Word , owl:NamedIndividual ; :wordValue "mike" ; :represents :C002 ; :belongsToLanguage :mel .
+:W7 rdf:type :Word , owl:NamedIndividual ; :wordValue "dia" ; :represents :C003 ; :belongsToLanguage :id .
+:W8 rdf:type :Word , owl:NamedIndividual ; :wordValue "manéhna" ; :represents :C003 ; :belongsToLanguage :su .
+:W9 rdf:type :Word , owl:NamedIndividual ; :wordValue "die" ; :represents :C003 ; :belongsToLanguage :mel .
+:W10 rdf:type :Word , owl:NamedIndividual ; :wordValue "dia" ; :represents :C004 ; :belongsToLanguage :id .
+:W11 rdf:type :Word , owl:NamedIndividual ; :wordValue "manéhna" ; :represents :C004 ; :belongsToLanguage :su .
+:W12 rdf:type :Word , owl:NamedIndividual ; :wordValue "die" ; :represents :C004 ; :belongsToLanguage :mel .
+:W13 rdf:type :Word , owl:NamedIndividual ; :wordValue "kita" ; :represents :C005 ; :belongsToLanguage :id .
+:W14 rdf:type :Word , owl:NamedIndividual ; :wordValue "arurang" ; :represents :C005 ; :belongsToLanguage :su .
+:W15 rdf:type :Word , owl:NamedIndividual ; :wordValue "kite_orang" ; :represents :C005 ; :belongsToLanguage :mel .
+:W16 rdf:type :Word , owl:NamedIndividual ; :wordValue "kalian" ; :represents :C006 ; :belongsToLanguage :id .
+:W17 rdf:type :Word , owl:NamedIndividual ; :wordValue "maranéh" ; :represents :C006 ; :belongsToLanguage :su .
+:W18 rdf:type :Word , owl:NamedIndividual ; :wordValue "korang" ; :represents :C006 ; :belongsToLanguage :mel .
+:W19 rdf:type :Word , owl:NamedIndividual ; :wordValue "mereka" ; :represents :C007 ; :belongsToLanguage :id .
+:W20 rdf:type :Word , owl:NamedIndividual ; :wordValue "maranéhna" ; :represents :C007 ; :belongsToLanguage :su .
+:W21 rdf:type :Word , owl:NamedIndividual ; :wordValue "die_orang" ; :represents :C007 ; :belongsToLanguage :mel .
+:W22 rdf:type :Word , owl:NamedIndividual ; :wordValue "ini" ; :represents :C008 ; :belongsToLanguage :id .
+:W23 rdf:type :Word , owl:NamedIndividual ; :wordValue "ieu" ; :represents :C008 ; :belongsToLanguage :su .
+:W24 rdf:type :Word , owl:NamedIndividual ; :wordValue "ini" ; :represents :C008 ; :belongsToLanguage :mel .
+:W25 rdf:type :Word , owl:NamedIndividual ; :wordValue "itu" ; :represents :C009 ; :belongsToLanguage :id .
+:W26 rdf:type :Word , owl:NamedIndividual ; :wordValue "éta" ; :represents :C009 ; :belongsToLanguage :su .
+:W27 rdf:type :Word , owl:NamedIndividual ; :wordValue "itu" ; :represents :C009 ; :belongsToLanguage :mel .
+:W28 rdf:type :Word , owl:NamedIndividual ; :wordValue "di sini" ; :represents :C010 ; :belongsToLanguage :id .
+:W29 rdf:type :Word , owl:NamedIndividual ; :wordValue "di_dieu" ; :represents :C010 ; :belongsToLanguage :su .
+:W30 rdf:type :Word , owl:NamedIndividual ; :wordValue "di sini" ; :represents :C010 ; :belongsToLanguage :mel .
+:W31 rdf:type :Word , owl:NamedIndividual ; :wordValue "di situ" ; :represents :C011 ; :belongsToLanguage :id .
+:W32 rdf:type :Word , owl:NamedIndividual ; :wordValue "di_ditu" ; :represents :C011 ; :belongsToLanguage :su .
+:W33 rdf:type :Word , owl:NamedIndividual ; :wordValue "kat_sane" ; :represents :C011 ; :belongsToLanguage :mel .
+:W34 rdf:type :Word , owl:NamedIndividual ; :wordValue "siapa" ; :represents :C012 ; :belongsToLanguage :id .
+:W35 rdf:type :Word , owl:NamedIndividual ; :wordValue "saha" ; :represents :C012 ; :belongsToLanguage :su .
+:W36 rdf:type :Word , owl:NamedIndividual ; :wordValue "sape" ; :represents :C012 ; :belongsToLanguage :mel .
+:W37 rdf:type :Word , owl:NamedIndividual ; :wordValue "apa" ; :represents :C013 ; :belongsToLanguage :id .
+:W38 rdf:type :Word , owl:NamedIndividual ; :wordValue "naon" ; :represents :C013 ; :belongsToLanguage :su .
+:W39 rdf:type :Word , owl:NamedIndividual ; :wordValue "ape" ; :represents :C013 ; :belongsToLanguage :mel .
+:W40 rdf:type :Word , owl:NamedIndividual ; :wordValue "di mana" ; :represents :C014 ; :belongsToLanguage :id .
+:W41 rdf:type :Word , owl:NamedIndividual ; :wordValue "di mana" ; :represents :C014 ; :belongsToLanguage :su .
+:W42 rdf:type :Word , owl:NamedIndividual ; :wordValue "kat_mane" ; :represents :C014 ; :belongsToLanguage :mel .
+:W43 rdf:type :Word , owl:NamedIndividual ; :wordValue "kapan" ; :represents :C015 ; :belongsToLanguage :id .
+:W44 rdf:type :Word , owl:NamedIndividual ; :wordValue "iraha" ; :represents :C015 ; :belongsToLanguage :su .
+:W45 rdf:type :Word , owl:NamedIndividual ; :wordValue "bile" ; :represents :C015 ; :belongsToLanguage :mel .
+:W46 rdf:type :Word , owl:NamedIndividual ; :wordValue "bagaimana" ; :represents :C016 ; :belongsToLanguage :id .
+:W47 rdf:type :Word , owl:NamedIndividual ; :wordValue "kumaha" ; :represents :C016 ; :belongsToLanguage :su .
+:W48 rdf:type :Word , owl:NamedIndividual ; :wordValue "macam_mane" ; :represents :C016 ; :belongsToLanguage :mel .
+:W49 rdf:type :Word , owl:NamedIndividual ; :wordValue "tidak" ; :represents :C017 ; :belongsToLanguage :id .
+:W50 rdf:type :Word , owl:NamedIndividual ; :wordValue "lain" ; :represents :C017 ; :belongsToLanguage :su .
+:W51 rdf:type :Word , owl:NamedIndividual ; :wordValue "tak" ; :represents :C017 ; :belongsToLanguage :mel .
+:W52 rdf:type :Word , owl:NamedIndividual ; :wordValue "semua" ; :represents :C018 ; :belongsToLanguage :id .
+:W53 rdf:type :Word , owl:NamedIndividual ; :wordValue "kabéh" ; :represents :C018 ; :belongsToLanguage :su .
+:W54 rdf:type :Word , owl:NamedIndividual ; :wordValue "semue" ; :represents :C018 ; :belongsToLanguage :mel .
+:W55 rdf:type :Word , owl:NamedIndividual ; :wordValue "banyak" ; :represents :C019 ; :belongsToLanguage :id .
+:W56 rdf:type :Word , owl:NamedIndividual ; :wordValue "loba" ; :represents :C019 ; :belongsToLanguage :su .
+:W57 rdf:type :Word , owl:NamedIndividual ; :wordValue "banyak" ; :represents :C019 ; :belongsToLanguage :mel .
+:W58 rdf:type :Word , owl:NamedIndividual ; :wordValue "beberapa" ; :represents :C020 ; :belongsToLanguage :id .
+:W59 rdf:type :Word , owl:NamedIndividual ; :wordValue "sababaraha" ; :represents :C020 ; :belongsToLanguage :su .
+:W60 rdf:type :Word , owl:NamedIndividual ; :wordValue "sebahagian" ; :represents :C020 ; :belongsToLanguage :mel .
+:W61 rdf:type :Word , owl:NamedIndividual ; :wordValue "sedikit" ; :represents :C021 ; :belongsToLanguage :id .
+:W62 rdf:type :Word , owl:NamedIndividual ; :wordValue "saeutik" ; :represents :C021 ; :belongsToLanguage :su .
+:W63 rdf:type :Word , owl:NamedIndividual ; :wordValue "sikit" ; :represents :C021 ; :belongsToLanguage :mel .
+:W64 rdf:type :Word , owl:NamedIndividual ; :wordValue "lain" ; :represents :C022 ; :belongsToLanguage :id .
+:W65 rdf:type :Word , owl:NamedIndividual ; :wordValue "lian" ; :represents :C022 ; :belongsToLanguage :su .
+:W66 rdf:type :Word , owl:NamedIndividual ; :wordValue "beze" ; :represents :C022 ; :belongsToLanguage :mel .
+:W67 rdf:type :Word , owl:NamedIndividual ; :wordValue "satu" ; :represents :C023 ; :belongsToLanguage :id .
+:W68 rdf:type :Word , owl:NamedIndividual ; :wordValue "hiji" ; :represents :C023 ; :belongsToLanguage :su .
+:W69 rdf:type :Word , owl:NamedIndividual ; :wordValue "satu" ; :represents :C023 ; :belongsToLanguage :mel .
+:W70 rdf:type :Word , owl:NamedIndividual ; :wordValue "dua" ; :represents :C024 ; :belongsToLanguage :id .
+:W71 rdf:type :Word , owl:NamedIndividual ; :wordValue "dua" ; :represents :C024 ; :belongsToLanguage :su .
+:W72 rdf:type :Word , owl:NamedIndividual ; :wordValue "due" ; :represents :C024 ; :belongsToLanguage :mel .
+:W73 rdf:type :Word , owl:NamedIndividual ; :wordValue "tiga" ; :represents :C025 ; :belongsToLanguage :id .
+:W74 rdf:type :Word , owl:NamedIndividual ; :wordValue "tilu" ; :represents :C025 ; :belongsToLanguage :su .
+:W75 rdf:type :Word , owl:NamedIndividual ; :wordValue "tige" ; :represents :C025 ; :belongsToLanguage :mel .
+:W76 rdf:type :Word , owl:NamedIndividual ; :wordValue "empat" ; :represents :C026 ; :belongsToLanguage :id .
+:W77 rdf:type :Word , owl:NamedIndividual ; :wordValue "opat" ; :represents :C026 ; :belongsToLanguage :su .
+:W78 rdf:type :Word , owl:NamedIndividual ; :wordValue "empat" ; :represents :C026 ; :belongsToLanguage :mel .
+:W79 rdf:type :Word , owl:NamedIndividual ; :wordValue "lima" ; :represents :C027 ; :belongsToLanguage :id .
+:W80 rdf:type :Word , owl:NamedIndividual ; :wordValue "lima" ; :represents :C027 ; :belongsToLanguage :su .
+:W81 rdf:type :Word , owl:NamedIndividual ; :wordValue "lime" ; :represents :C027 ; :belongsToLanguage :mel .
+:W82 rdf:type :Word , owl:NamedIndividual ; :wordValue "besar" ; :represents :C028 ; :belongsToLanguage :id .
+:W83 rdf:type :Word , owl:NamedIndividual ; :wordValue "badag" ; :represents :C028 ; :belongsToLanguage :su .
+:W84 rdf:type :Word , owl:NamedIndividual ; :wordValue "besak" ; :represents :C028 ; :belongsToLanguage :mel .
+:W85 rdf:type :Word , owl:NamedIndividual ; :wordValue "panjang" ; :represents :C029 ; :belongsToLanguage :id .
+:W86 rdf:type :Word , owl:NamedIndividual ; :wordValue "panjang" ; :represents :C029 ; :belongsToLanguage :su .
+:W87 rdf:type :Word , owl:NamedIndividual ; :wordValue "panjang" ; :represents :C029 ; :belongsToLanguage :mel .
+:W88 rdf:type :Word , owl:NamedIndividual ; :wordValue "lebar" ; :represents :C030 ; :belongsToLanguage :id .
+:W89 rdf:type :Word , owl:NamedIndividual ; :wordValue "rubak" ; :represents :C030 ; :belongsToLanguage :su .
+:W90 rdf:type :Word , owl:NamedIndividual ; :wordValue "luas" ; :represents :C030 ; :belongsToLanguage :mel .
+:W91 rdf:type :Word , owl:NamedIndividual ; :wordValue "tebal" ; :represents :C031 ; :belongsToLanguage :id .
+:W92 rdf:type :Word , owl:NamedIndividual ; :wordValue "kandel" ; :represents :C031 ; :belongsToLanguage :su .
+:W93 rdf:type :Word , owl:NamedIndividual ; :wordValue "tebal" ; :represents :C031 ; :belongsToLanguage :mel .
+:W94 rdf:type :Word , owl:NamedIndividual ; :wordValue "berat" ; :represents :C032 ; :belongsToLanguage :id .
+:W95 rdf:type :Word , owl:NamedIndividual ; :wordValue "beurat" ; :represents :C032 ; :belongsToLanguage :su .
+:W96 rdf:type :Word , owl:NamedIndividual ; :wordValue "berat" ; :represents :C032 ; :belongsToLanguage :mel .
+:W97 rdf:type :Word , owl:NamedIndividual ; :wordValue "kecil" ; :represents :C033 ; :belongsToLanguage :id .
+:W98 rdf:type :Word , owl:NamedIndividual ; :wordValue "leutik" ; :represents :C033 ; :belongsToLanguage :su .
+:W99 rdf:type :Word , owl:NamedIndividual ; :wordValue "kecik" ; :represents :C033 ; :belongsToLanguage :mel .
+:W100 rdf:type :Word , owl:NamedIndividual ; :wordValue "pendek" ; :represents :C034 ; :belongsToLanguage :id .
+:W101 rdf:type :Word , owl:NamedIndividual ; :wordValue "pondok" ; :represents :C034 ; :belongsToLanguage :su .
+:W102 rdf:type :Word , owl:NamedIndividual ; :wordValue "pendek" ; :represents :C034 ; :belongsToLanguage :mel .
+:W103 rdf:type :Word , owl:NamedIndividual ; :wordValue "sempit" ; :represents :C035 ; :belongsToLanguage :id .
+:W104 rdf:type :Word , owl:NamedIndividual ; :wordValue "heureut" ; :represents :C035 ; :belongsToLanguage :su .
+:W105 rdf:type :Word , owl:NamedIndividual ; :wordValue "sempit" ; :represents :C035 ; :belongsToLanguage :mel .
+:W106 rdf:type :Word , owl:NamedIndividual ; :wordValue "tipis" ; :represents :C036 ; :belongsToLanguage :id .
+:W107 rdf:type :Word , owl:NamedIndividual ; :wordValue "ipis" ; :represents :C036 ; :belongsToLanguage :su .
+:W108 rdf:type :Word , owl:NamedIndividual ; :wordValue "nipis" ; :represents :C036 ; :belongsToLanguage :mel .
+:W109 rdf:type :Word , owl:NamedIndividual ; :wordValue "wanita" ; :represents :C037 ; :belongsToLanguage :id .
+:W110 rdf:type :Word , owl:NamedIndividual ; :wordValue "awéwé" ; :represents :C037 ; :belongsToLanguage :su .
+:W111 rdf:type :Word , owl:NamedIndividual ; :wordValue "puan" ; :represents :C037 ; :belongsToLanguage :mel .
+:W112 rdf:type :Word , owl:NamedIndividual ; :wordValue "pria" ; :represents :C038 ; :belongsToLanguage :id .
+:W113 rdf:type :Word , owl:NamedIndividual ; :wordValue "lalaki" ; :represents :C038 ; :belongsToLanguage :su .
+:W114 rdf:type :Word , owl:NamedIndividual ; :wordValue "lelaki" ; :represents :C038 ; :belongsToLanguage :mel .
+:W115 rdf:type :Word , owl:NamedIndividual ; :wordValue "manusia" ; :represents :C039 ; :belongsToLanguage :id .
+:W116 rdf:type :Word , owl:NamedIndividual ; :wordValue "jalma" ; :represents :C039 ; :belongsToLanguage :su .
+:W117 rdf:type :Word , owl:NamedIndividual ; :wordValue "manusie" ; :represents :C039 ; :belongsToLanguage :mel .
+:W118 rdf:type :Word , owl:NamedIndividual ; :wordValue "anak" ; :represents :C040 ; :belongsToLanguage :id .
+:W119 rdf:type :Word , owl:NamedIndividual ; :wordValue "budak" ; :represents :C040 ; :belongsToLanguage :su .
+:W120 rdf:type :Word , owl:NamedIndividual ; :wordValue "budak" ; :represents :C040 ; :belongsToLanguage :mel .
+:W121 rdf:type :Word , owl:NamedIndividual ; :wordValue "istri" ; :represents :C041 ; :belongsToLanguage :id .
+:W122 rdf:type :Word , owl:NamedIndividual ; :wordValue "pamajikan" ; :represents :C041 ; :belongsToLanguage :su .
+:W123 rdf:type :Word , owl:NamedIndividual ; :wordValue "bini" ; :represents :C041 ; :belongsToLanguage :mel .
+:W124 rdf:type :Word , owl:NamedIndividual ; :wordValue "suami" ; :represents :C042 ; :belongsToLanguage :id .
+:W125 rdf:type :Word , owl:NamedIndividual ; :wordValue "salaki" ; :represents :C042 ; :belongsToLanguage :su .
+:W126 rdf:type :Word , owl:NamedIndividual ; :wordValue "laki" ; :represents :C042 ; :belongsToLanguage :mel .
+:W127 rdf:type :Word , owl:NamedIndividual ; :wordValue "ibu" ; :represents :C043 ; :belongsToLanguage :id .
+:W128 rdf:type :Word , owl:NamedIndividual ; :wordValue "indung" ; :represents :C043 ; :belongsToLanguage :su .
+:W129 rdf:type :Word , owl:NamedIndividual ; :wordValue "mak" ; :represents :C043 ; :belongsToLanguage :mel .
+:W130 rdf:type :Word , owl:NamedIndividual ; :wordValue "ayah" ; :represents :C044 ; :belongsToLanguage :id .
+:W131 rdf:type :Word , owl:NamedIndividual ; :wordValue "bapa" ; :represents :C044 ; :belongsToLanguage :su .
+:W132 rdf:type :Word , owl:NamedIndividual ; :wordValue "bapa" ; :represents :C044 ; :belongsToLanguage :mel .
+:W133 rdf:type :Word , owl:NamedIndividual ; :wordValue "binatang" ; :represents :C045 ; :belongsToLanguage :id .
+:W134 rdf:type :Word , owl:NamedIndividual ; :wordValue "sato" ; :represents :C045 ; :belongsToLanguage :su .
+:W135 rdf:type :Word , owl:NamedIndividual ; :wordValue "haiwan" ; :represents :C045 ; :belongsToLanguage :mel .
+:W136 rdf:type :Word , owl:NamedIndividual ; :wordValue "ikan" ; :represents :C046 ; :belongsToLanguage :id .
+:W137 rdf:type :Word , owl:NamedIndividual ; :wordValue "lauk" ; :represents :C046 ; :belongsToLanguage :su .
+:W138 rdf:type :Word , owl:NamedIndividual ; :wordValue "hikan" ; :represents :C046 ; :belongsToLanguage :mel .
+:W139 rdf:type :Word , owl:NamedIndividual ; :wordValue "burung" ; :represents :C047 ; :belongsToLanguage :id .
+:W140 rdf:type :Word , owl:NamedIndividual ; :wordValue "manuk" ; :represents :C047 ; :belongsToLanguage :su .
+:W141 rdf:type :Word , owl:NamedIndividual ; :wordValue "burung" ; :represents :C047 ; :belongsToLanguage :mel .
+:W142 rdf:type :Word , owl:NamedIndividual ; :wordValue "anjing" ; :represents :C048 ; :belongsToLanguage :id .
+:W143 rdf:type :Word , owl:NamedIndividual ; :wordValue "anjing" ; :represents :C048 ; :belongsToLanguage :su .
+:W144 rdf:type :Word , owl:NamedIndividual ; :wordValue "hanjing" ; :represents :C048 ; :belongsToLanguage :mel .
+:W145 rdf:type :Word , owl:NamedIndividual ; :wordValue "kutu" ; :represents :C049 ; :belongsToLanguage :id .
+:W146 rdf:type :Word , owl:NamedIndividual ; :wordValue "kutu" ; :represents :C049 ; :belongsToLanguage :su .
+:W147 rdf:type :Word , owl:NamedIndividual ; :wordValue "kutu" ; :represents :C049 ; :belongsToLanguage :mel .
+:W148 rdf:type :Word , owl:NamedIndividual ; :wordValue "ular" ; :represents :C050 ; :belongsToLanguage :id .
+:W149 rdf:type :Word , owl:NamedIndividual ; :wordValue "oray" ; :represents :C050 ; :belongsToLanguage :su .
+:W150 rdf:type :Word , owl:NamedIndividual ; :wordValue "ular" ; :represents :C050 ; :belongsToLanguage :mel .
+:W151 rdf:type :Word , owl:NamedIndividual ; :wordValue "cacing" ; :represents :C051 ; :belongsToLanguage :id .
+:W152 rdf:type :Word , owl:NamedIndividual ; :wordValue "cacing" ; :represents :C051 ; :belongsToLanguage :su .
+:W153 rdf:type :Word , owl:NamedIndividual ; :wordValue "cacing" ; :represents :C051 ; :belongsToLanguage :mel .
+:W154 rdf:type :Word , owl:NamedIndividual ; :wordValue "pohon" ; :represents :C052 ; :belongsToLanguage :id .
+:W155 rdf:type :Word , owl:NamedIndividual ; :wordValue "tangkal" ; :represents :C052 ; :belongsToLanguage :su .
+:W156 rdf:type :Word , owl:NamedIndividual ; :wordValue "pokok" ; :represents :C052 ; :belongsToLanguage :mel .
+:W157 rdf:type :Word , owl:NamedIndividual ; :wordValue "hutan" ; :represents :C053 ; :belongsToLanguage :id .
+:W158 rdf:type :Word , owl:NamedIndividual ; :wordValue "leuweung" ; :represents :C053 ; :belongsToLanguage :su .
+:W159 rdf:type :Word , owl:NamedIndividual ; :wordValue "hutan" ; :represents :C053 ; :belongsToLanguage :mel .
+:W160 rdf:type :Word , owl:NamedIndividual ; :wordValue "ranting" ; :represents :C054 ; :belongsToLanguage :id .
+:W161 rdf:type :Word , owl:NamedIndividual ; :wordValue "iteuk" ; :represents :C054 ; :belongsToLanguage :su .
+:W162 rdf:type :Word , owl:NamedIndividual ; :wordValue "cabang_pokok" ; :represents :C054 ; :belongsToLanguage :mel .
+:W163 rdf:type :Word , owl:NamedIndividual ; :wordValue "buah" ; :represents :C055 ; :belongsToLanguage :id .
+:W164 rdf:type :Word , owl:NamedIndividual ; :wordValue "buah" ; :represents :C055 ; :belongsToLanguage :su .
+:W165 rdf:type :Word , owl:NamedIndividual ; :wordValue "buah" ; :represents :C055 ; :belongsToLanguage :mel .
+:W166 rdf:type :Word , owl:NamedIndividual ; :wordValue "biji" ; :represents :C056 ; :belongsToLanguage :id .
+:W167 rdf:type :Word , owl:NamedIndividual ; :wordValue "siki" ; :represents :C056 ; :belongsToLanguage :su .
+:W168 rdf:type :Word , owl:NamedIndividual ; :wordValue "biji" ; :represents :C056 ; :belongsToLanguage :mel .
+:W169 rdf:type :Word , owl:NamedIndividual ; :wordValue "daun" ; :represents :C057 ; :belongsToLanguage :id .
+:W170 rdf:type :Word , owl:NamedIndividual ; :wordValue "daun" ; :represents :C057 ; :belongsToLanguage :su .
+:W171 rdf:type :Word , owl:NamedIndividual ; :wordValue "daun" ; :represents :C057 ; :belongsToLanguage :mel .
+:W172 rdf:type :Word , owl:NamedIndividual ; :wordValue "akar" ; :represents :C058 ; :belongsToLanguage :id .
+:W173 rdf:type :Word , owl:NamedIndividual ; :wordValue "akar" ; :represents :C058 ; :belongsToLanguage :su .
+:W174 rdf:type :Word , owl:NamedIndividual ; :wordValue "akar" ; :represents :C058 ; :belongsToLanguage :mel .
+:W175 rdf:type :Word , owl:NamedIndividual ; :wordValue "kulit_pohon" ; :represents :C059 ; :belongsToLanguage :id .
+:W176 rdf:type :Word , owl:NamedIndividual ; :wordValue "kai" ; :represents :C059 ; :belongsToLanguage :su .
+:W177 rdf:type :Word , owl:NamedIndividual ; :wordValue "kulit_kayu" ; :represents :C059 ; :belongsToLanguage :mel .
+:W178 rdf:type :Word , owl:NamedIndividual ; :wordValue "bunga" ; :represents :C060 ; :belongsToLanguage :id .
+:W179 rdf:type :Word , owl:NamedIndividual ; :wordValue "kembang" ; :represents :C060 ; :belongsToLanguage :su .
+:W180 rdf:type :Word , owl:NamedIndividual ; :wordValue "bunga" ; :represents :C060 ; :belongsToLanguage :mel .
+:W181 rdf:type :Word , owl:NamedIndividual ; :wordValue "rumput" ; :represents :C061 ; :belongsToLanguage :id .
+:W182 rdf:type :Word , owl:NamedIndividual ; :wordValue "jukut" ; :represents :C061 ; :belongsToLanguage :su .
+:W183 rdf:type :Word , owl:NamedIndividual ; :wordValue "rumput" ; :represents :C061 ; :belongsToLanguage :mel .
+:W184 rdf:type :Word , owl:NamedIndividual ; :wordValue "tali" ; :represents :C062 ; :belongsToLanguage :id .
+:W185 rdf:type :Word , owl:NamedIndividual ; :wordValue "tambang" ; :represents :C062 ; :belongsToLanguage :su .
+:W186 rdf:type :Word , owl:NamedIndividual ; :wordValue "tali" ; :represents :C062 ; :belongsToLanguage :mel .
+:W187 rdf:type :Word , owl:NamedIndividual ; :wordValue "kulit" ; :represents :C063 ; :belongsToLanguage :id .
+:W188 rdf:type :Word , owl:NamedIndividual ; :wordValue "kulit" ; :represents :C063 ; :belongsToLanguage :su .
+:W189 rdf:type :Word , owl:NamedIndividual ; :wordValue "kulit" ; :represents :C063 ; :belongsToLanguage :mel .
+:W190 rdf:type :Word , owl:NamedIndividual ; :wordValue "daging" ; :represents :C064 ; :belongsToLanguage :id .
+:W191 rdf:type :Word , owl:NamedIndividual ; :wordValue "daging" ; :represents :C064 ; :belongsToLanguage :su .
+:W192 rdf:type :Word , owl:NamedIndividual ; :wordValue "daging" ; :represents :C064 ; :belongsToLanguage :mel .
+:W193 rdf:type :Word , owl:NamedIndividual ; :wordValue "darah" ; :represents :C065 ; :belongsToLanguage :id .
+:W194 rdf:type :Word , owl:NamedIndividual ; :wordValue "getih" ; :represents :C065 ; :belongsToLanguage :su .
+:W195 rdf:type :Word , owl:NamedIndividual ; :wordValue "dareh" ; :represents :C065 ; :belongsToLanguage :mel .
+:W196 rdf:type :Word , owl:NamedIndividual ; :wordValue "tulang" ; :represents :C066 ; :belongsToLanguage :id .
+:W197 rdf:type :Word , owl:NamedIndividual ; :wordValue "tulang" ; :represents :C066 ; :belongsToLanguage :su .
+:W198 rdf:type :Word , owl:NamedIndividual ; :wordValue "tulang" ; :represents :C066 ; :belongsToLanguage :mel .
+:W199 rdf:type :Word , owl:NamedIndividual ; :wordValue "lemak" ; :represents :C067 ; :belongsToLanguage :id .
+:W200 rdf:type :Word , owl:NamedIndividual ; :wordValue "lemak" ; :represents :C067 ; :belongsToLanguage :su .
+:W201 rdf:type :Word , owl:NamedIndividual ; :wordValue "lemak" ; :represents :C067 ; :belongsToLanguage :mel .
+:W202 rdf:type :Word , owl:NamedIndividual ; :wordValue "telur" ; :represents :C068 ; :belongsToLanguage :id .
+:W203 rdf:type :Word , owl:NamedIndividual ; :wordValue "endog" ; :represents :C068 ; :belongsToLanguage :su .
+:W204 rdf:type :Word , owl:NamedIndividual ; :wordValue "telo" ; :represents :C068 ; :belongsToLanguage :mel .
+:W205 rdf:type :Word , owl:NamedIndividual ; :wordValue "tanduk" ; :represents :C069 ; :belongsToLanguage :id .
+:W206 rdf:type :Word , owl:NamedIndividual ; :wordValue "tanduk" ; :represents :C069 ; :belongsToLanguage :su .
+:W207 rdf:type :Word , owl:NamedIndividual ; :wordValue "tanduk" ; :represents :C069 ; :belongsToLanguage :mel .
+:W208 rdf:type :Word , owl:NamedIndividual ; :wordValue "ekor" ; :represents :C070 ; :belongsToLanguage :id .
+:W209 rdf:type :Word , owl:NamedIndividual ; :wordValue "buntut" ; :represents :C070 ; :belongsToLanguage :su .
+:W210 rdf:type :Word , owl:NamedIndividual ; :wordValue "ekor" ; :represents :C070 ; :belongsToLanguage :mel .
+:W211 rdf:type :Word , owl:NamedIndividual ; :wordValue "bulu" ; :represents :C071 ; :belongsToLanguage :id .
+:W212 rdf:type :Word , owl:NamedIndividual ; :wordValue "bulu" ; :represents :C071 ; :belongsToLanguage :su .
+:W213 rdf:type :Word , owl:NamedIndividual ; :wordValue "bulu" ; :represents :C071 ; :belongsToLanguage :mel .
+:W214 rdf:type :Word , owl:NamedIndividual ; :wordValue "rambut" ; :represents :C072 ; :belongsToLanguage :id .
+:W215 rdf:type :Word , owl:NamedIndividual ; :wordValue "buuk" ; :represents :C072 ; :belongsToLanguage :su .
+:W216 rdf:type :Word , owl:NamedIndividual ; :wordValue "rambut" ; :represents :C072 ; :belongsToLanguage :mel .
+:W217 rdf:type :Word , owl:NamedIndividual ; :wordValue "kepala" ; :represents :C073 ; :belongsToLanguage :id .
+:W218 rdf:type :Word , owl:NamedIndividual ; :wordValue "buuk" ; :represents :C073 ; :belongsToLanguage :su .
+:W219 rdf:type :Word , owl:NamedIndividual ; :wordValue "hulu" ; :represents :C073 ; :belongsToLanguage :mel .
+:W220 rdf:type :Word , owl:NamedIndividual ; :wordValue "telinga" ; :represents :C074 ; :belongsToLanguage :id .
+:W221 rdf:type :Word , owl:NamedIndividual ; :wordValue "ceuli" ; :represents :C074 ; :belongsToLanguage :su .
+:W222 rdf:type :Word , owl:NamedIndividual ; :wordValue "telinga" ; :represents :C074 ; :belongsToLanguage :mel .
+:W223 rdf:type :Word , owl:NamedIndividual ; :wordValue "mata" ; :represents :C075 ; :belongsToLanguage :id .
+:W224 rdf:type :Word , owl:NamedIndividual ; :wordValue "panon" ; :represents :C075 ; :belongsToLanguage :su .
+:W225 rdf:type :Word , owl:NamedIndividual ; :wordValue "mate" ; :represents :C075 ; :belongsToLanguage :mel .
+:W226 rdf:type :Word , owl:NamedIndividual ; :wordValue "hidung" ; :represents :C076 ; :belongsToLanguage :id .
+:W227 rdf:type :Word , owl:NamedIndividual ; :wordValue "irung" ; :represents :C076 ; :belongsToLanguage :su .
+:W228 rdf:type :Word , owl:NamedIndividual ; :wordValue "hidung" ; :represents :C076 ; :belongsToLanguage :mel .
+:W229 rdf:type :Word , owl:NamedIndividual ; :wordValue "mulut" ; :represents :C077 ; :belongsToLanguage :id .
+:W230 rdf:type :Word , owl:NamedIndividual ; :wordValue "sungut" ; :represents :C077 ; :belongsToLanguage :su .
+:W231 rdf:type :Word , owl:NamedIndividual ; :wordValue "mulot" ; :represents :C077 ; :belongsToLanguage :mel .
+:W232 rdf:type :Word , owl:NamedIndividual ; :wordValue "gigi" ; :represents :C078 ; :belongsToLanguage :id .
+:W233 rdf:type :Word , owl:NamedIndividual ; :wordValue "huntu" ; :represents :C078 ; :belongsToLanguage :su .
+:W234 rdf:type :Word , owl:NamedIndividual ; :wordValue "gigi" ; :represents :C078 ; :belongsToLanguage :mel .
+:W235 rdf:type :Word , owl:NamedIndividual ; :wordValue "lidah" ; :represents :C079 ; :belongsToLanguage :id .
+:W236 rdf:type :Word , owl:NamedIndividual ; :wordValue "létah" ; :represents :C079 ; :belongsToLanguage :su .
+:W237 rdf:type :Word , owl:NamedIndividual ; :wordValue "lidah" ; :represents :C079 ; :belongsToLanguage :mel .
+:W238 rdf:type :Word , owl:NamedIndividual ; :wordValue "kuku" ; :represents :C080 ; :belongsToLanguage :id .
+:W239 rdf:type :Word , owl:NamedIndividual ; :wordValue "kuku" ; :represents :C080 ; :belongsToLanguage :su .
+:W240 rdf:type :Word , owl:NamedIndividual ; :wordValue "kuku" ; :represents :C080 ; :belongsToLanguage :mel .
+:W241 rdf:type :Word , owl:NamedIndividual ; :wordValue "kaki" ; :represents :C081 ; :belongsToLanguage :id .
+:W242 rdf:type :Word , owl:NamedIndividual ; :wordValue "suku" ; :represents :C081 ; :belongsToLanguage :su .
+:W243 rdf:type :Word , owl:NamedIndividual ; :wordValue "kaki" ; :represents :C081 ; :belongsToLanguage :mel .
+:W244 rdf:type :Word , owl:NamedIndividual ; :wordValue "tungkai" ; :represents :C082 ; :belongsToLanguage :id .
+:W245 rdf:type :Word , owl:NamedIndividual ; :wordValue "dampal_suku" ; :represents :C082 ; :belongsToLanguage :su .
+:W246 rdf:type :Word , owl:NamedIndividual ; :wordValue "tapak_kaki" ; :represents :C082 ; :belongsToLanguage :mel .
+:W247 rdf:type :Word , owl:NamedIndividual ; :wordValue "lutut" ; :represents :C083 ; :belongsToLanguage :id .
+:W248 rdf:type :Word , owl:NamedIndividual ; :wordValue "tuur" ; :represents :C083 ; :belongsToLanguage :su .
+:W249 rdf:type :Word , owl:NamedIndividual ; :wordValue "lutut" ; :represents :C083 ; :belongsToLanguage :mel .
+:W250 rdf:type :Word , owl:NamedIndividual ; :wordValue "tangan" ; :represents :C084 ; :belongsToLanguage :id .
+:W251 rdf:type :Word , owl:NamedIndividual ; :wordValue "leungeun" ; :represents :C084 ; :belongsToLanguage :su .
+:W252 rdf:type :Word , owl:NamedIndividual ; :wordValue "tangan" ; :represents :C084 ; :belongsToLanguage :mel .
+:W253 rdf:type :Word , owl:NamedIndividual ; :wordValue "sayap" ; :represents :C085 ; :belongsToLanguage :id .
+:W254 rdf:type :Word , owl:NamedIndividual ; :wordValue "jangjang" ; :represents :C085 ; :belongsToLanguage :su .
+:W255 rdf:type :Word , owl:NamedIndividual ; :wordValue "sayap" ; :represents :C085 ; :belongsToLanguage :mel .
+:W256 rdf:type :Word , owl:NamedIndividual ; :wordValue "perut" ; :represents :C086 ; :belongsToLanguage :id .
+:W257 rdf:type :Word , owl:NamedIndividual ; :wordValue "beuteung" ; :represents :C086 ; :belongsToLanguage :su .
+:W258 rdf:type :Word , owl:NamedIndividual ; :wordValue "perut" ; :represents :C086 ; :belongsToLanguage :mel .
+:W259 rdf:type :Word , owl:NamedIndividual ; :wordValue "usus" ; :represents :C087 ; :belongsToLanguage :id .
+:W260 rdf:type :Word , owl:NamedIndividual ; :wordValue "peujit" ; :represents :C087 ; :belongsToLanguage :su .
+:W261 rdf:type :Word , owl:NamedIndividual ; :wordValue "usus" ; :represents :C087 ; :belongsToLanguage :mel .
+:W262 rdf:type :Word , owl:NamedIndividual ; :wordValue "leher" ; :represents :C088 ; :belongsToLanguage :id .
+:W263 rdf:type :Word , owl:NamedIndividual ; :wordValue "beuheung" ; :represents :C088 ; :belongsToLanguage :su .
+:W264 rdf:type :Word , owl:NamedIndividual ; :wordValue "leher" ; :represents :C088 ; :belongsToLanguage :mel .
+:W265 rdf:type :Word , owl:NamedIndividual ; :wordValue "punggung" ; :represents :C089 ; :belongsToLanguage :id .
+:W266 rdf:type :Word , owl:NamedIndividual ; :wordValue "tonggong" ; :represents :C089 ; :belongsToLanguage :su .
+:W267 rdf:type :Word , owl:NamedIndividual ; :wordValue "belakang_badan" ; :represents :C089 ; :belongsToLanguage :mel .
+:W268 rdf:type :Word , owl:NamedIndividual ; :wordValue "payudara" ; :represents :C090 ; :belongsToLanguage :id .
+:W269 rdf:type :Word , owl:NamedIndividual ; :wordValue "susu" ; :represents :C090 ; :belongsToLanguage :su .
+:W270 rdf:type :Word , owl:NamedIndividual ; :wordValue "susu" ; :represents :C090 ; :belongsToLanguage :mel .
+:W271 rdf:type :Word , owl:NamedIndividual ; :wordValue "jantung" ; :represents :C091 ; :belongsToLanguage :id .
+:W272 rdf:type :Word , owl:NamedIndividual ; :wordValue "jajantung" ; :represents :C091 ; :belongsToLanguage :su .
+:W273 rdf:type :Word , owl:NamedIndividual ; :wordValue "hati" ; :represents :C091 ; :belongsToLanguage :mel .
+:W274 rdf:type :Word , owl:NamedIndividual ; :wordValue "hati" ; :represents :C092 ; :belongsToLanguage :id .
+:W275 rdf:type :Word , owl:NamedIndividual ; :wordValue "haté" ; :represents :C092 ; :belongsToLanguage :su .
+:W276 rdf:type :Word , owl:NamedIndividual ; :wordValue "hati" ; :represents :C092 ; :belongsToLanguage :mel .
+:W277 rdf:type :Word , owl:NamedIndividual ; :wordValue "minum" ; :represents :C093 ; :belongsToLanguage :id .
+:W278 rdf:type :Word , owl:NamedIndividual ; :wordValue "inum" ; :represents :C093 ; :belongsToLanguage :su .
+:W279 rdf:type :Word , owl:NamedIndividual ; :wordValue "minum" ; :represents :C093 ; :belongsToLanguage :mel .
+:W280 rdf:type :Word , owl:NamedIndividual ; :wordValue "makan" ; :represents :C094 ; :belongsToLanguage :id .
+:W281 rdf:type :Word , owl:NamedIndividual ; :wordValue "dahar" ; :represents :C094 ; :belongsToLanguage :su .
+:W282 rdf:type :Word , owl:NamedIndividual ; :wordValue "makan" ; :represents :C094 ; :belongsToLanguage :mel .
+:W283 rdf:type :Word , owl:NamedIndividual ; :wordValue "gigit" ; :represents :C095 ; :belongsToLanguage :id .
+:W284 rdf:type :Word , owl:NamedIndividual ; :wordValue "gégél" ; :represents :C095 ; :belongsToLanguage :su .
+:W285 rdf:type :Word , owl:NamedIndividual ; :wordValue "keket" ; :represents :C095 ; :belongsToLanguage :mel .
+:W286 rdf:type :Word , owl:NamedIndividual ; :wordValue "isap" ; :represents :C096 ; :belongsToLanguage :id .
+:W287 rdf:type :Word , owl:NamedIndividual ; :wordValue "nyoco" ; :represents :C096 ; :belongsToLanguage :su .
+:W288 rdf:type :Word , owl:NamedIndividual ; :wordValue "isap" ; :represents :C096 ; :belongsToLanguage :mel .
+:W289 rdf:type :Word , owl:NamedIndividual ; :wordValue "ludah" ; :represents :C097 ; :belongsToLanguage :id .
+:W290 rdf:type :Word , owl:NamedIndividual ; :wordValue "ciduh" ; :represents :C097 ; :belongsToLanguage :su .
+:W291 rdf:type :Word , owl:NamedIndividual ; :wordValue "ludah" ; :represents :C097 ; :belongsToLanguage :mel .
+:W292 rdf:type :Word , owl:NamedIndividual ; :wordValue "muntah" ; :represents :C098 ; :belongsToLanguage :id .
+:W293 rdf:type :Word , owl:NamedIndividual ; :wordValue "utah" ; :represents :C098 ; :belongsToLanguage :su .
+:W294 rdf:type :Word , owl:NamedIndividual ; :wordValue "muntah" ; :represents :C098 ; :belongsToLanguage :mel .
+:W295 rdf:type :Word , owl:NamedIndividual ; :wordValue "tiup" ; :represents :C099 ; :belongsToLanguage :id .
+:W296 rdf:type :Word , owl:NamedIndividual ; :wordValue "tiup" ; :represents :C099 ; :belongsToLanguage :su .
+:W297 rdf:type :Word , owl:NamedIndividual ; :wordValue "tiup" ; :represents :C099 ; :belongsToLanguage :mel .
+:W298 rdf:type :Word , owl:NamedIndividual ; :wordValue "napas" ; :represents :C100 ; :belongsToLanguage :id .
+:W299 rdf:type :Word , owl:NamedIndividual ; :wordValue "rénghap" ; :represents :C100 ; :belongsToLanguage :su .
+:W300 rdf:type :Word , owl:NamedIndividual ; :wordValue "nafas" ; :represents :C100 ; :belongsToLanguage :mel .
+:W301 rdf:type :Word , owl:NamedIndividual ; :wordValue "tawa" ; :represents :C101 ; :belongsToLanguage :id .
+:W302 rdf:type :Word , owl:NamedIndividual ; :wordValue "seuri" ; :represents :C101 ; :belongsToLanguage :su .
+:W303 rdf:type :Word , owl:NamedIndividual ; :wordValue "gelak" ; :represents :C101 ; :belongsToLanguage :mel .
+:W304 rdf:type :Word , owl:NamedIndividual ; :wordValue "lihat" ; :represents :C102 ; :belongsToLanguage :id .
+:W305 rdf:type :Word , owl:NamedIndividual ; :wordValue "tempo" ; :represents :C102 ; :belongsToLanguage :su .
+:W306 rdf:type :Word , owl:NamedIndividual ; :wordValue "tengok" ; :represents :C102 ; :belongsToLanguage :mel .
+:W307 rdf:type :Word , owl:NamedIndividual ; :wordValue "dengar" ; :represents :C103 ; :belongsToLanguage :id .
+:W308 rdf:type :Word , owl:NamedIndividual ; :wordValue "déngé" ; :represents :C103 ; :belongsToLanguage :su .
+:W309 rdf:type :Word , owl:NamedIndividual ; :wordValue "dengar" ; :represents :C103 ; :belongsToLanguage :mel .
+:W310 rdf:type :Word , owl:NamedIndividual ; :wordValue "tahu" ; :represents :C104 ; :belongsToLanguage :id .
+:W311 rdf:type :Word , owl:NamedIndividual ; :wordValue "nyaho" ; :represents :C104 ; :belongsToLanguage :su .
+:W312 rdf:type :Word , owl:NamedIndividual ; :wordValue "reti" ; :represents :C104 ; :belongsToLanguage :mel .
+:W313 rdf:type :Word , owl:NamedIndividual ; :wordValue "pikir" ; :represents :C105 ; :belongsToLanguage :id .
+:W314 rdf:type :Word , owl:NamedIndividual ; :wordValue "mikir" ; :represents :C105 ; :belongsToLanguage :su .
+:W315 rdf:type :Word , owl:NamedIndividual ; :wordValue "fikir" ; :represents :C105 ; :belongsToLanguage :mel .
+:W316 rdf:type :Word , owl:NamedIndividual ; :wordValue "cium" ; :represents :C106 ; :belongsToLanguage :id .
+:W317 rdf:type :Word , owl:NamedIndividual ; :wordValue "ambeu" ; :represents :C106 ; :belongsToLanguage :su .
+:W318 rdf:type :Word , owl:NamedIndividual ; :wordValue "cium" ; :represents :C106 ; :belongsToLanguage :mel .
+:W319 rdf:type :Word , owl:NamedIndividual ; :wordValue "takut" ; :represents :C107 ; :belongsToLanguage :id .
+:W320 rdf:type :Word , owl:NamedIndividual ; :wordValue "sieun" ; :represents :C107 ; :belongsToLanguage :su .
+:W321 rdf:type :Word , owl:NamedIndividual ; :wordValue "takut" ; :represents :C107 ; :belongsToLanguage :mel .
+:W322 rdf:type :Word , owl:NamedIndividual ; :wordValue "tidur" ; :represents :C108 ; :belongsToLanguage :id .
+:W323 rdf:type :Word , owl:NamedIndividual ; :wordValue "saré" ; :represents :C108 ; :belongsToLanguage :su .
+:W324 rdf:type :Word , owl:NamedIndividual ; :wordValue "tidur" ; :represents :C108 ; :belongsToLanguage :mel .
+:W325 rdf:type :Word , owl:NamedIndividual ; :wordValue "hidup" ; :represents :C109 ; :belongsToLanguage :id .
+:W326 rdf:type :Word , owl:NamedIndividual ; :wordValue "hirup" ; :represents :C109 ; :belongsToLanguage :su .
+:W327 rdf:type :Word , owl:NamedIndividual ; :wordValue "hidup" ; :represents :C109 ; :belongsToLanguage :mel .
+:W328 rdf:type :Word , owl:NamedIndividual ; :wordValue "mati" ; :represents :C110 ; :belongsToLanguage :id .
+:W329 rdf:type :Word , owl:NamedIndividual ; :wordValue "maot" ; :represents :C110 ; :belongsToLanguage :su .
+:W330 rdf:type :Word , owl:NamedIndividual ; :wordValue "mati" ; :represents :C110 ; :belongsToLanguage :mel .
+:W331 rdf:type :Word , owl:NamedIndividual ; :wordValue "bunuh" ; :represents :C111 ; :belongsToLanguage :id .
+:W332 rdf:type :Word , owl:NamedIndividual ; :wordValue "maéhan" ; :represents :C111 ; :belongsToLanguage :su .
+:W333 rdf:type :Word , owl:NamedIndividual ; :wordValue "bunuh" ; :represents :C111 ; :belongsToLanguage :mel .
+:W334 rdf:type :Word , owl:NamedIndividual ; :wordValue "kelahi" ; :represents :C112 ; :belongsToLanguage :id .
+:W335 rdf:type :Word , owl:NamedIndividual ; :wordValue "gelut" ; :represents :C112 ; :belongsToLanguage :su .
+:W336 rdf:type :Word , owl:NamedIndividual ; :wordValue "gaduh" ; :represents :C112 ; :belongsToLanguage :mel .
+:W337 rdf:type :Word , owl:NamedIndividual ; :wordValue "buru" ; :represents :C113 ; :belongsToLanguage :id .
+:W338 rdf:type :Word , owl:NamedIndividual ; :wordValue "moro" ; :represents :C113 ; :belongsToLanguage :su .
+:W339 rdf:type :Word , owl:NamedIndividual ; :wordValue "buru" ; :represents :C113 ; :belongsToLanguage :mel .
+:W340 rdf:type :Word , owl:NamedIndividual ; :wordValue "pukul" ; :represents :C114 ; :belongsToLanguage :id .
+:W341 rdf:type :Word , owl:NamedIndividual ; :wordValue "takol" ; :represents :C114 ; :belongsToLanguage :su .
+:W342 rdf:type :Word , owl:NamedIndividual ; :wordValue "hempuk" ; :represents :C114 ; :belongsToLanguage :mel .
+:W343 rdf:type :Word , owl:NamedIndividual ; :wordValue "potong" ; :represents :C115 ; :belongsToLanguage :id .
+:W344 rdf:type :Word , owl:NamedIndividual ; :wordValue "teukteuk" ; :represents :C115 ; :belongsToLanguage :su .
+:W345 rdf:type :Word , owl:NamedIndividual ; :wordValue "potong" ; :represents :C115 ; :belongsToLanguage :mel .
+:W346 rdf:type :Word , owl:NamedIndividual ; :wordValue "belah" ; :represents :C116 ; :belongsToLanguage :id .
+:W347 rdf:type :Word , owl:NamedIndividual ; :wordValue "beulah" ; :represents :C116 ; :belongsToLanguage :su .
+:W348 rdf:type :Word , owl:NamedIndividual ; :wordValue "bahagi" ; :represents :C116 ; :belongsToLanguage :mel .
+:W349 rdf:type :Word , owl:NamedIndividual ; :wordValue "tusuk" ; :represents :C117 ; :belongsToLanguage :id .
+:W350 rdf:type :Word , owl:NamedIndividual ; :wordValue "colok" ; :represents :C117 ; :belongsToLanguage :su .
+:W351 rdf:type :Word , owl:NamedIndividual ; :wordValue "cucuk" ; :represents :C117 ; :belongsToLanguage :mel .
+:W352 rdf:type :Word , owl:NamedIndividual ; :wordValue "garuk" ; :represents :C118 ; :belongsToLanguage :id .
+:W353 rdf:type :Word , owl:NamedIndividual ; :wordValue "corét" ; :represents :C118 ; :belongsToLanguage :su .
+:W354 rdf:type :Word , owl:NamedIndividual ; :wordValue "conteng" ; :represents :C118 ; :belongsToLanguage :mel .
+:W355 rdf:type :Word , owl:NamedIndividual ; :wordValue "gali" ; :represents :C119 ; :belongsToLanguage :id .
+:W356 rdf:type :Word , owl:NamedIndividual ; :wordValue "gali" ; :represents :C119 ; :belongsToLanguage :su .
+:W357 rdf:type :Word , owl:NamedIndividual ; :wordValue "gali" ; :represents :C119 ; :belongsToLanguage :mel .
+:W358 rdf:type :Word , owl:NamedIndividual ; :wordValue "renang" ; :represents :C120 ; :belongsToLanguage :id .
+:W359 rdf:type :Word , owl:NamedIndividual ; :wordValue "ojay" ; :represents :C120 ; :belongsToLanguage :su .
+:W360 rdf:type :Word , owl:NamedIndividual ; :wordValue "renang" ; :represents :C120 ; :belongsToLanguage :mel .
+:W361 rdf:type :Word , owl:NamedIndividual ; :wordValue "terbang" ; :represents :C121 ; :belongsToLanguage :id .
+:W362 rdf:type :Word , owl:NamedIndividual ; :wordValue "hiber" ; :represents :C121 ; :belongsToLanguage :su .
+:W363 rdf:type :Word , owl:NamedIndividual ; :wordValue "terbang" ; :represents :C121 ; :belongsToLanguage :mel .
+:W364 rdf:type :Word , owl:NamedIndividual ; :wordValue "jalan" ; :represents :C122 ; :belongsToLanguage :id .
+:W365 rdf:type :Word , owl:NamedIndividual ; :wordValue "leumpang" ; :represents :C122 ; :belongsToLanguage :su .
+:W366 rdf:type :Word , owl:NamedIndividual ; :wordValue "jalan" ; :represents :C122 ; :belongsToLanguage :mel .
+:W367 rdf:type :Word , owl:NamedIndividual ; :wordValue "datang" ; :represents :C123 ; :belongsToLanguage :id .
+:W368 rdf:type :Word , owl:NamedIndividual ; :wordValue "datang" ; :represents :C123 ; :belongsToLanguage :su .
+:W369 rdf:type :Word , owl:NamedIndividual ; :wordValue "tibe" ; :represents :C123 ; :belongsToLanguage :mel .
+:W370 rdf:type :Word , owl:NamedIndividual ; :wordValue "baring" ; :represents :C124 ; :belongsToLanguage :id .
+:W371 rdf:type :Word , owl:NamedIndividual ; :wordValue "kedeng" ; :represents :C124 ; :belongsToLanguage :su .
+:W372 rdf:type :Word , owl:NamedIndividual ; :wordValue "baring" ; :represents :C124 ; :belongsToLanguage :mel .
+:W373 rdf:type :Word , owl:NamedIndividual ; :wordValue "duduk" ; :represents :C125 ; :belongsToLanguage :id .
+:W374 rdf:type :Word , owl:NamedIndividual ; :wordValue "diuk" ; :represents :C125 ; :belongsToLanguage :su .
+:W375 rdf:type :Word , owl:NamedIndividual ; :wordValue "duduk" ; :represents :C125 ; :belongsToLanguage :mel .
+:W376 rdf:type :Word , owl:NamedIndividual ; :wordValue "diri" ; :represents :C126 ; :belongsToLanguage :id .
+:W377 rdf:type :Word , owl:NamedIndividual ; :wordValue "tangtung" ; :represents :C126 ; :belongsToLanguage :su .
+:W378 rdf:type :Word , owl:NamedIndividual ; :wordValue "berdiri" ; :represents :C126 ; :belongsToLanguage :mel .
+:W379 rdf:type :Word , owl:NamedIndividual ; :wordValue "belok" ; :represents :C127 ; :belongsToLanguage :id .
+:W380 rdf:type :Word , owl:NamedIndividual ; :wordValue "méngkol" ; :represents :C127 ; :belongsToLanguage :su .
+:W381 rdf:type :Word , owl:NamedIndividual ; :wordValue "pusing" ; :represents :C127 ; :belongsToLanguage :mel .
+:W382 rdf:type :Word , owl:NamedIndividual ; :wordValue "jatuh" ; :represents :C128 ; :belongsToLanguage :id .
+:W383 rdf:type :Word , owl:NamedIndividual ; :wordValue "labuh" ; :represents :C128 ; :belongsToLanguage :su .
+:W384 rdf:type :Word , owl:NamedIndividual ; :wordValue "jatuh" ; :represents :C128 ; :belongsToLanguage :mel .
+:W385 rdf:type :Word , owl:NamedIndividual ; :wordValue "beri" ; :represents :C129 ; :belongsToLanguage :id .
+:W386 rdf:type :Word , owl:NamedIndividual ; :wordValue "béré" ; :represents :C129 ; :belongsToLanguage :su .
+:W387 rdf:type :Word , owl:NamedIndividual ; :wordValue "kongsi" ; :represents :C129 ; :belongsToLanguage :mel .
+:W388 rdf:type :Word , owl:NamedIndividual ; :wordValue "pegang" ; :represents :C130 ; :belongsToLanguage :id .
+:W389 rdf:type :Word , owl:NamedIndividual ; :wordValue "tahan" ; :represents :C130 ; :belongsToLanguage :su .
+:W390 rdf:type :Word , owl:NamedIndividual ; :wordValue "pegang" ; :represents :C130 ; :belongsToLanguage :mel .
+:W391 rdf:type :Word , owl:NamedIndividual ; :wordValue "peras" ; :represents :C131 ; :belongsToLanguage :id .
+:W392 rdf:type :Word , owl:NamedIndividual ; :wordValue "peureut" ; :represents :C131 ; :belongsToLanguage :su .
+:W393 rdf:type :Word , owl:NamedIndividual ; :wordValue "peras" ; :represents :C131 ; :belongsToLanguage :mel .
+:W394 rdf:type :Word , owl:NamedIndividual ; :wordValue "gosok" ; :represents :C132 ; :belongsToLanguage :id .
+:W395 rdf:type :Word , owl:NamedIndividual ; :wordValue "gosok" ; :represents :C132 ; :belongsToLanguage :su .
+:W396 rdf:type :Word , owl:NamedIndividual ; :wordValue "gesel" ; :represents :C132 ; :belongsToLanguage :mel .
+:W397 rdf:type :Word , owl:NamedIndividual ; :wordValue "cuci" ; :represents :C133 ; :belongsToLanguage :id .
+:W398 rdf:type :Word , owl:NamedIndividual ; :wordValue "kumbah" ; :represents :C133 ; :belongsToLanguage :su .
+:W399 rdf:type :Word , owl:NamedIndividual ; :wordValue "cuci" ; :represents :C133 ; :belongsToLanguage :mel .
+:W400 rdf:type :Word , owl:NamedIndividual ; :wordValue "usap" ; :represents :C134 ; :belongsToLanguage :id .
+:W401 rdf:type :Word , owl:NamedIndividual ; :wordValue "hapus" ; :represents :C134 ; :belongsToLanguage :su .
+:W402 rdf:type :Word , owl:NamedIndividual ; :wordValue "padam" ; :represents :C134 ; :belongsToLanguage :mel .
+:W403 rdf:type :Word , owl:NamedIndividual ; :wordValue "tarik" ; :represents :C135 ; :belongsToLanguage :id .
+:W404 rdf:type :Word , owl:NamedIndividual ; :wordValue "betot" ; :represents :C135 ; :belongsToLanguage :su .
+:W405 rdf:type :Word , owl:NamedIndividual ; :wordValue "tarik" ; :represents :C135 ; :belongsToLanguage :mel .
+:W406 rdf:type :Word , owl:NamedIndividual ; :wordValue "dorong" ; :represents :C136 ; :belongsToLanguage :id .
+:W407 rdf:type :Word , owl:NamedIndividual ; :wordValue "surung" ; :represents :C136 ; :belongsToLanguage :su .
+:W408 rdf:type :Word , owl:NamedIndividual ; :wordValue "tolak" ; :represents :C136 ; :belongsToLanguage :mel .
+:W409 rdf:type :Word , owl:NamedIndividual ; :wordValue "lempar" ; :represents :C137 ; :belongsToLanguage :id .
+:W410 rdf:type :Word , owl:NamedIndividual ; :wordValue "alung" ; :represents :C137 ; :belongsToLanguage :su .
+:W411 rdf:type :Word , owl:NamedIndividual ; :wordValue "buang" ; :represents :C137 ; :belongsToLanguage :mel .
+:W412 rdf:type :Word , owl:NamedIndividual ; :wordValue "ikat" ; :represents :C138 ; :belongsToLanguage :id .
+:W413 rdf:type :Word , owl:NamedIndividual ; :wordValue "beungkeut" ; :represents :C138 ; :belongsToLanguage :su .
+:W414 rdf:type :Word , owl:NamedIndividual ; :wordValue "hikat" ; :represents :C138 ; :belongsToLanguage :mel .
+:W415 rdf:type :Word , owl:NamedIndividual ; :wordValue "jahit" ; :represents :C139 ; :belongsToLanguage :id .
+:W416 rdf:type :Word , owl:NamedIndividual ; :wordValue "kaput" ; :represents :C139 ; :belongsToLanguage :su .
+:W417 rdf:type :Word , owl:NamedIndividual ; :wordValue "jahit" ; :represents :C139 ; :belongsToLanguage :mel .
+:W418 rdf:type :Word , owl:NamedIndividual ; :wordValue "hitung" ; :represents :C140 ; :belongsToLanguage :id .
+:W419 rdf:type :Word , owl:NamedIndividual ; :wordValue "itung" ; :represents :C140 ; :belongsToLanguage :su .
+:W420 rdf:type :Word , owl:NamedIndividual ; :wordValue "kire" ; :represents :C140 ; :belongsToLanguage :mel .
+:W421 rdf:type :Word , owl:NamedIndividual ; :wordValue "berkata" ; :represents :C141 ; :belongsToLanguage :id .
+:W422 rdf:type :Word , owl:NamedIndividual ; :wordValue "nyarita" ; :represents :C141 ; :belongsToLanguage :su .
+:W423 rdf:type :Word , owl:NamedIndividual ; :wordValue "cakap" ; :represents :C141 ; :belongsToLanguage :mel .
+:W424 rdf:type :Word , owl:NamedIndividual ; :wordValue "bernyanyi" ; :represents :C142 ; :belongsToLanguage :id .
+:W425 rdf:type :Word , owl:NamedIndividual ; :wordValue "nyanyi" ; :represents :C142 ; :belongsToLanguage :su .
+:W426 rdf:type :Word , owl:NamedIndividual ; :wordValue "menyanyi" ; :represents :C142 ; :belongsToLanguage :mel .
+:W427 rdf:type :Word , owl:NamedIndividual ; :wordValue "bermain" ; :represents :C143 ; :belongsToLanguage :id .
+:W428 rdf:type :Word , owl:NamedIndividual ; :wordValue "ulin" ; :represents :C143 ; :belongsToLanguage :su .
+:W429 rdf:type :Word , owl:NamedIndividual ; :wordValue "main" ; :represents :C143 ; :belongsToLanguage :mel .
+:W430 rdf:type :Word , owl:NamedIndividual ; :wordValue "mengapung" ; :represents :C144 ; :belongsToLanguage :id .
+:W431 rdf:type :Word , owl:NamedIndividual ; :wordValue "ambang" ; :represents :C144 ; :belongsToLanguage :su .
+:W432 rdf:type :Word , owl:NamedIndividual ; :wordValue "terapung" ; :represents :C144 ; :belongsToLanguage :mel .
+:W433 rdf:type :Word , owl:NamedIndividual ; :wordValue "mengalir" ; :represents :C145 ; :belongsToLanguage :id .
+:W434 rdf:type :Word , owl:NamedIndividual ; :wordValue "palid" ; :represents :C145 ; :belongsToLanguage :su .
+:W435 rdf:type :Word , owl:NamedIndividual ; :wordValue "mengalir" ; :represents :C145 ; :belongsToLanguage :mel .
+:W436 rdf:type :Word , owl:NamedIndividual ; :wordValue "membeku" ; :represents :C146 ; :belongsToLanguage :id .
+:W437 rdf:type :Word , owl:NamedIndividual ; :wordValue "beku" ; :represents :C146 ; :belongsToLanguage :su .
+:W438 rdf:type :Word , owl:NamedIndividual ; :wordValue "beku" ; :represents :C146 ; :belongsToLanguage :mel .
+:W439 rdf:type :Word , owl:NamedIndividual ; :wordValue "membengkak" ; :represents :C147 ; :belongsToLanguage :id .
+:W440 rdf:type :Word , owl:NamedIndividual ; :wordValue "bareuh" ; :represents :C147 ; :belongsToLanguage :su .
+:W441 rdf:type :Word , owl:NamedIndividual ; :wordValue "bengkak" ; :represents :C147 ; :belongsToLanguage :mel .
+:W442 rdf:type :Word , owl:NamedIndividual ; :wordValue "matahari" ; :represents :C148 ; :belongsToLanguage :id .
+:W443 rdf:type :Word , owl:NamedIndividual ; :wordValue "panonpoé" ; :represents :C148 ; :belongsToLanguage :su .
+:W444 rdf:type :Word , owl:NamedIndividual ; :wordValue "matahari" ; :represents :C148 ; :belongsToLanguage :mel .
+:W445 rdf:type :Word , owl:NamedIndividual ; :wordValue "bulan" ; :represents :C149 ; :belongsToLanguage :id .
+:W446 rdf:type :Word , owl:NamedIndividual ; :wordValue "bulan" ; :represents :C149 ; :belongsToLanguage :su .
+:W447 rdf:type :Word , owl:NamedIndividual ; :wordValue "bulan" ; :represents :C149 ; :belongsToLanguage :mel .
+:W448 rdf:type :Word , owl:NamedIndividual ; :wordValue "bintang" ; :represents :C150 ; :belongsToLanguage :id .
+:W449 rdf:type :Word , owl:NamedIndividual ; :wordValue "béntang" ; :represents :C150 ; :belongsToLanguage :su .
+:W450 rdf:type :Word , owl:NamedIndividual ; :wordValue "bintang" ; :represents :C150 ; :belongsToLanguage :mel .
+:W451 rdf:type :Word , owl:NamedIndividual ; :wordValue "air" ; :represents :C151 ; :belongsToLanguage :id .
+:W452 rdf:type :Word , owl:NamedIndividual ; :wordValue "cai" ; :represents :C151 ; :belongsToLanguage :su .
+:W453 rdf:type :Word , owl:NamedIndividual ; :wordValue "air" ; :represents :C151 ; :belongsToLanguage :mel .
+:W454 rdf:type :Word , owl:NamedIndividual ; :wordValue "hujan" ; :represents :C152 ; :belongsToLanguage :id .
+:W455 rdf:type :Word , owl:NamedIndividual ; :wordValue "hujan" ; :represents :C152 ; :belongsToLanguage :su .
+:W456 rdf:type :Word , owl:NamedIndividual ; :wordValue "hujan" ; :represents :C152 ; :belongsToLanguage :mel .
+:W457 rdf:type :Word , owl:NamedIndividual ; :wordValue "sungai" ; :represents :C153 ; :belongsToLanguage :id .
+:W458 rdf:type :Word , owl:NamedIndividual ; :wordValue "walungan" ; :represents :C153 ; :belongsToLanguage :su .
+:W459 rdf:type :Word , owl:NamedIndividual ; :wordValue "sungai" ; :represents :C153 ; :belongsToLanguage :mel .
+:W460 rdf:type :Word , owl:NamedIndividual ; :wordValue "danau" ; :represents :C154 ; :belongsToLanguage :id .
+:W461 rdf:type :Word , owl:NamedIndividual ; :wordValue "situ" ; :represents :C154 ; :belongsToLanguage :su .
+:W462 rdf:type :Word , owl:NamedIndividual ; :wordValue "tasik" ; :represents :C154 ; :belongsToLanguage :mel .
+:W463 rdf:type :Word , owl:NamedIndividual ; :wordValue "laut" ; :represents :C155 ; :belongsToLanguage :id .
+:W464 rdf:type :Word , owl:NamedIndividual ; :wordValue "sagara" ; :represents :C155 ; :belongsToLanguage :su .
+:W465 rdf:type :Word , owl:NamedIndividual ; :wordValue "laut" ; :represents :C155 ; :belongsToLanguage :mel .
+:W466 rdf:type :Word , owl:NamedIndividual ; :wordValue "garam" ; :represents :C156 ; :belongsToLanguage :id .
+:W467 rdf:type :Word , owl:NamedIndividual ; :wordValue "uyah" ; :represents :C156 ; :belongsToLanguage :su .
+:W468 rdf:type :Word , owl:NamedIndividual ; :wordValue "garam" ; :represents :C156 ; :belongsToLanguage :mel .
+:W469 rdf:type :Word , owl:NamedIndividual ; :wordValue "batu" ; :represents :C157 ; :belongsToLanguage :id .
+:W470 rdf:type :Word , owl:NamedIndividual ; :wordValue "batu" ; :represents :C157 ; :belongsToLanguage :su .
+:W471 rdf:type :Word , owl:NamedIndividual ; :wordValue "batu" ; :represents :C157 ; :belongsToLanguage :mel .
+:W472 rdf:type :Word , owl:NamedIndividual ; :wordValue "pasir" ; :represents :C158 ; :belongsToLanguage :id .
+:W473 rdf:type :Word , owl:NamedIndividual ; :wordValue "keusik" ; :represents :C158 ; :belongsToLanguage :su .
+:W474 rdf:type :Word , owl:NamedIndividual ; :wordValue "pasir" ; :represents :C158 ; :belongsToLanguage :mel .
+:W475 rdf:type :Word , owl:NamedIndividual ; :wordValue "debu" ; :represents :C159 ; :belongsToLanguage :id .
+:W476 rdf:type :Word , owl:NamedIndividual ; :wordValue "kebul" ; :represents :C159 ; :belongsToLanguage :su .
+:W477 rdf:type :Word , owl:NamedIndividual ; :wordValue "debu" ; :represents :C159 ; :belongsToLanguage :mel .
+:W478 rdf:type :Word , owl:NamedIndividual ; :wordValue "bumi" ; :represents :C160 ; :belongsToLanguage :id .
+:W479 rdf:type :Word , owl:NamedIndividual ; :wordValue "marcapada" ; :represents :C160 ; :belongsToLanguage :su .
+:W480 rdf:type :Word , owl:NamedIndividual ; :wordValue "bumi" ; :represents :C160 ; :belongsToLanguage :mel .
+:W481 rdf:type :Word , owl:NamedIndividual ; :wordValue "awan" ; :represents :C161 ; :belongsToLanguage :id .
+:W482 rdf:type :Word , owl:NamedIndividual ; :wordValue "méga" ; :represents :C161 ; :belongsToLanguage :su .
+:W483 rdf:type :Word , owl:NamedIndividual ; :wordValue "awan" ; :represents :C161 ; :belongsToLanguage :mel .
+:W484 rdf:type :Word , owl:NamedIndividual ; :wordValue "kabut" ; :represents :C162 ; :belongsToLanguage :id .
+:W485 rdf:type :Word , owl:NamedIndividual ; :wordValue "halimun" ; :represents :C162 ; :belongsToLanguage :su .
+:W486 rdf:type :Word , owl:NamedIndividual ; :wordValue "kabut" ; :represents :C162 ; :belongsToLanguage :mel .
+:W487 rdf:type :Word , owl:NamedIndividual ; :wordValue "langit" ; :represents :C163 ; :belongsToLanguage :id .
+:W488 rdf:type :Word , owl:NamedIndividual ; :wordValue "langit" ; :represents :C163 ; :belongsToLanguage :su .
+:W489 rdf:type :Word , owl:NamedIndividual ; :wordValue "langit" ; :represents :C163 ; :belongsToLanguage :mel .
+:W490 rdf:type :Word , owl:NamedIndividual ; :wordValue "angin" ; :represents :C164 ; :belongsToLanguage :id .
+:W491 rdf:type :Word , owl:NamedIndividual ; :wordValue "angin" ; :represents :C164 ; :belongsToLanguage :su .
+:W492 rdf:type :Word , owl:NamedIndividual ; :wordValue "angin" ; :represents :C164 ; :belongsToLanguage :mel .
+:W493 rdf:type :Word , owl:NamedIndividual ; :wordValue "salju" ; :represents :C165 ; :belongsToLanguage :id .
+:W494 rdf:type :Word , owl:NamedIndividual ; :wordValue "salju" ; :represents :C165 ; :belongsToLanguage :su .
+:W495 rdf:type :Word , owl:NamedIndividual ; :wordValue "salji" ; :represents :C165 ; :belongsToLanguage :mel .
+:W496 rdf:type :Word , owl:NamedIndividual ; :wordValue "es" ; :represents :C166 ; :belongsToLanguage :id .
+:W497 rdf:type :Word , owl:NamedIndividual ; :wordValue "és" ; :represents :C166 ; :belongsToLanguage :su .
+:W498 rdf:type :Word , owl:NamedIndividual ; :wordValue "ais" ; :represents :C166 ; :belongsToLanguage :mel .
+:W499 rdf:type :Word , owl:NamedIndividual ; :wordValue "asap" ; :represents :C167 ; :belongsToLanguage :id .
+:W500 rdf:type :Word , owl:NamedIndividual ; :wordValue "haseup" ; :represents :C167 ; :belongsToLanguage :su .
+:W501 rdf:type :Word , owl:NamedIndividual ; :wordValue "asap" ; :represents :C167 ; :belongsToLanguage :mel .
+:W502 rdf:type :Word , owl:NamedIndividual ; :wordValue "api" ; :represents :C168 ; :belongsToLanguage :id .
+:W503 rdf:type :Word , owl:NamedIndividual ; :wordValue "seuneu" ; :represents :C168 ; :belongsToLanguage :su .
+:W504 rdf:type :Word , owl:NamedIndividual ; :wordValue "api" ; :represents :C168 ; :belongsToLanguage :mel .
+:W505 rdf:type :Word , owl:NamedIndividual ; :wordValue "abu" ; :represents :C169 ; :belongsToLanguage :id .
+:W506 rdf:type :Word , owl:NamedIndividual ; :wordValue "lebu" ; :represents :C169 ; :belongsToLanguage :su .
+:W507 rdf:type :Word , owl:NamedIndividual ; :wordValue "abu" ; :represents :C169 ; :belongsToLanguage :mel .
+:W508 rdf:type :Word , owl:NamedIndividual ; :wordValue "bakar" ; :represents :C170 ; :belongsToLanguage :id .
+:W509 rdf:type :Word , owl:NamedIndividual ; :wordValue "duruk" ; :represents :C170 ; :belongsToLanguage :su .
+:W510 rdf:type :Word , owl:NamedIndividual ; :wordValue "bakar" ; :represents :C170 ; :belongsToLanguage :mel .
+:W511 rdf:type :Word , owl:NamedIndividual ; :wordValue "jalan" ; :represents :C171 ; :belongsToLanguage :id .
+:W512 rdf:type :Word , owl:NamedIndividual ; :wordValue "jalan" ; :represents :C171 ; :belongsToLanguage :su .
+:W513 rdf:type :Word , owl:NamedIndividual ; :wordValue "jalan" ; :represents :C171 ; :belongsToLanguage :mel .
+:W514 rdf:type :Word , owl:NamedIndividual ; :wordValue "gunung" ; :represents :C172 ; :belongsToLanguage :id .
+:W515 rdf:type :Word , owl:NamedIndividual ; :wordValue "gunung" ; :represents :C172 ; :belongsToLanguage :su .
+:W516 rdf:type :Word , owl:NamedIndividual ; :wordValue "gunung" ; :represents :C172 ; :belongsToLanguage :mel .
+:W517 rdf:type :Word , owl:NamedIndividual ; :wordValue "merah" ; :represents :C173 ; :belongsToLanguage :id .
+:W518 rdf:type :Word , owl:NamedIndividual ; :wordValue "beureum" ; :represents :C173 ; :belongsToLanguage :su .
+:W519 rdf:type :Word , owl:NamedIndividual ; :wordValue "merah" ; :represents :C173 ; :belongsToLanguage :mel .
+:W520 rdf:type :Word , owl:NamedIndividual ; :wordValue "hijau" ; :represents :C174 ; :belongsToLanguage :id .
+:W521 rdf:type :Word , owl:NamedIndividual ; :wordValue "héjo" ; :represents :C174 ; :belongsToLanguage :su .
+:W522 rdf:type :Word , owl:NamedIndividual ; :wordValue "hijau" ; :represents :C174 ; :belongsToLanguage :mel .
+:W523 rdf:type :Word , owl:NamedIndividual ; :wordValue "kuning" ; :represents :C175 ; :belongsToLanguage :id .
+:W524 rdf:type :Word , owl:NamedIndividual ; :wordValue "konéng" ; :represents :C175 ; :belongsToLanguage :su .
+:W525 rdf:type :Word , owl:NamedIndividual ; :wordValue "kuning" ; :represents :C175 ; :belongsToLanguage :mel .
+:W526 rdf:type :Word , owl:NamedIndividual ; :wordValue "putih" ; :represents :C176 ; :belongsToLanguage :id .
+:W527 rdf:type :Word , owl:NamedIndividual ; :wordValue "bodas" ; :represents :C176 ; :belongsToLanguage :su .
+:W528 rdf:type :Word , owl:NamedIndividual ; :wordValue "putih" ; :represents :C176 ; :belongsToLanguage :mel .
+:W529 rdf:type :Word , owl:NamedIndividual ; :wordValue "hitam" ; :represents :C177 ; :belongsToLanguage :id .
+:W530 rdf:type :Word , owl:NamedIndividual ; :wordValue "hideung" ; :represents :C177 ; :belongsToLanguage :su .
+:W531 rdf:type :Word , owl:NamedIndividual ; :wordValue "hitam" ; :represents :C177 ; :belongsToLanguage :mel .
+:W532 rdf:type :Word , owl:NamedIndividual ; :wordValue "malam" ; :represents :C178 ; :belongsToLanguage :id .
+:W533 rdf:type :Word , owl:NamedIndividual ; :wordValue "peuting" ; :represents :C178 ; :belongsToLanguage :su .
+:W534 rdf:type :Word , owl:NamedIndividual ; :wordValue "malam" ; :represents :C178 ; :belongsToLanguage :mel .
+:W535 rdf:type :Word , owl:NamedIndividual ; :wordValue "hari" ; :represents :C179 ; :belongsToLanguage :id .
+:W536 rdf:type :Word , owl:NamedIndividual ; :wordValue "poé" ; :represents :C179 ; :belongsToLanguage :su .
+:W537 rdf:type :Word , owl:NamedIndividual ; :wordValue "hari" ; :represents :C179 ; :belongsToLanguage :mel .
+:W538 rdf:type :Word , owl:NamedIndividual ; :wordValue "tahun" ; :represents :C180 ; :belongsToLanguage :id .
+:W539 rdf:type :Word , owl:NamedIndividual ; :wordValue "taun" ; :represents :C180 ; :belongsToLanguage :su .
+:W540 rdf:type :Word , owl:NamedIndividual ; :wordValue "tahun" ; :represents :C180 ; :belongsToLanguage :mel .
+:W541 rdf:type :Word , owl:NamedIndividual ; :wordValue "hangat" ; :represents :C181 ; :belongsToLanguage :id .
+:W542 rdf:type :Word , owl:NamedIndividual ; :wordValue "haneut" ; :represents :C181 ; :belongsToLanguage :su .
+:W543 rdf:type :Word , owl:NamedIndividual ; :wordValue "hangat" ; :represents :C181 ; :belongsToLanguage :mel .
+:W544 rdf:type :Word , owl:NamedIndividual ; :wordValue "dingin" ; :represents :C182 ; :belongsToLanguage :id .
+:W545 rdf:type :Word , owl:NamedIndividual ; :wordValue "tiis" ; :represents :C182 ; :belongsToLanguage :su .
+:W546 rdf:type :Word , owl:NamedIndividual ; :wordValue "sejuk" ; :represents :C182 ; :belongsToLanguage :mel .
+:W547 rdf:type :Word , owl:NamedIndividual ; :wordValue "penuh" ; :represents :C183 ; :belongsToLanguage :id .
+:W548 rdf:type :Word , owl:NamedIndividual ; :wordValue "pinuh" ; :represents :C183 ; :belongsToLanguage :su .
+:W549 rdf:type :Word , owl:NamedIndividual ; :wordValue "penuh" ; :represents :C183 ; :belongsToLanguage :mel .
+:W550 rdf:type :Word , owl:NamedIndividual ; :wordValue "baru" ; :represents :C184 ; :belongsToLanguage :id .
+:W551 rdf:type :Word , owl:NamedIndividual ; :wordValue "anyar" ; :represents :C184 ; :belongsToLanguage :su .
+:W552 rdf:type :Word , owl:NamedIndividual ; :wordValue "baru" ; :represents :C184 ; :belongsToLanguage :mel .
+:W553 rdf:type :Word , owl:NamedIndividual ; :wordValue "lama" ; :represents :C185 ; :belongsToLanguage :id .
+:W554 rdf:type :Word , owl:NamedIndividual ; :wordValue "heubeul" ; :represents :C185 ; :belongsToLanguage :su .
+:W555 rdf:type :Word , owl:NamedIndividual ; :wordValue "lame" ; :represents :C185 ; :belongsToLanguage :mel .
+:W556 rdf:type :Word , owl:NamedIndividual ; :wordValue "baik" ; :represents :C186 ; :belongsToLanguage :id .
+:W557 rdf:type :Word , owl:NamedIndividual ; :wordValue "alus" ; :represents :C186 ; :belongsToLanguage :su .
+:W558 rdf:type :Word , owl:NamedIndividual ; :wordValue "bagus" ; :represents :C186 ; :belongsToLanguage :mel .
+:W559 rdf:type :Word , owl:NamedIndividual ; :wordValue "buruk" ; :represents :C187 ; :belongsToLanguage :id .
+:W560 rdf:type :Word , owl:NamedIndividual ; :wordValue "goréng" ; :represents :C187 ; :belongsToLanguage :su .
+:W561 rdf:type :Word , owl:NamedIndividual ; :wordValue "buruk" ; :represents :C187 ; :belongsToLanguage :mel .
+:W562 rdf:type :Word , owl:NamedIndividual ; :wordValue "busuk" ; :represents :C188 ; :belongsToLanguage :id .
+:W563 rdf:type :Word , owl:NamedIndividual ; :wordValue "buruk" ; :represents :C188 ; :belongsToLanguage :su .
+:W564 rdf:type :Word , owl:NamedIndividual ; :wordValue "busuk" ; :represents :C188 ; :belongsToLanguage :mel .
+:W565 rdf:type :Word , owl:NamedIndividual ; :wordValue "kotor" ; :represents :C189 ; :belongsToLanguage :id .
+:W566 rdf:type :Word , owl:NamedIndividual ; :wordValue "bagedur" ; :represents :C189 ; :belongsToLanguage :su .
+:W567 rdf:type :Word , owl:NamedIndividual ; :wordValue "kotor" ; :represents :C189 ; :belongsToLanguage :mel .
+:W568 rdf:type :Word , owl:NamedIndividual ; :wordValue "lurus" ; :represents :C190 ; :belongsToLanguage :id .
+:W569 rdf:type :Word , owl:NamedIndividual ; :wordValue "lempeng" ; :represents :C190 ; :belongsToLanguage :su .
+:W570 rdf:type :Word , owl:NamedIndividual ; :wordValue "lurus" ; :represents :C190 ; :belongsToLanguage :mel .
+:W571 rdf:type :Word , owl:NamedIndividual ; :wordValue "bulat" ; :represents :C191 ; :belongsToLanguage :id .
+:W572 rdf:type :Word , owl:NamedIndividual ; :wordValue "buleud" ; :represents :C191 ; :belongsToLanguage :su .
+:W573 rdf:type :Word , owl:NamedIndividual ; :wordValue "bulat" ; :represents :C191 ; :belongsToLanguage :mel .
+:W574 rdf:type :Word , owl:NamedIndividual ; :wordValue "tajam" ; :represents :C192 ; :belongsToLanguage :id .
+:W575 rdf:type :Word , owl:NamedIndividual ; :wordValue "seukeut" ; :represents :C192 ; :belongsToLanguage :su .
+:W576 rdf:type :Word , owl:NamedIndividual ; :wordValue "tajam" ; :represents :C192 ; :belongsToLanguage :mel .
+:W577 rdf:type :Word , owl:NamedIndividual ; :wordValue "tumpul" ; :represents :C193 ; :belongsToLanguage :id .
+:W578 rdf:type :Word , owl:NamedIndividual ; :wordValue "mintul" ; :represents :C193 ; :belongsToLanguage :su .
+:W579 rdf:type :Word , owl:NamedIndividual ; :wordValue "tumpul" ; :represents :C193 ; :belongsToLanguage :mel .
+:W580 rdf:type :Word , owl:NamedIndividual ; :wordValue "licin" ; :represents :C194 ; :belongsToLanguage :id .
+:W581 rdf:type :Word , owl:NamedIndividual ; :wordValue "lésang" ; :represents :C194 ; :belongsToLanguage :su .
+:W582 rdf:type :Word , owl:NamedIndividual ; :wordValue "licin" ; :represents :C194 ; :belongsToLanguage :mel .
+:W583 rdf:type :Word , owl:NamedIndividual ; :wordValue "basah" ; :represents :C195 ; :belongsToLanguage :id .
+:W584 rdf:type :Word , owl:NamedIndividual ; :wordValue "baseuh" ; :represents :C195 ; :belongsToLanguage :su .
+:W585 rdf:type :Word , owl:NamedIndividual ; :wordValue "basah" ; :represents :C195 ; :belongsToLanguage :mel .
+:W586 rdf:type :Word , owl:NamedIndividual ; :wordValue "kering" ; :represents :C196 ; :belongsToLanguage :id .
+:W587 rdf:type :Word , owl:NamedIndividual ; :wordValue "garing" ; :represents :C196 ; :belongsToLanguage :su .
+:W588 rdf:type :Word , owl:NamedIndividual ; :wordValue "kering" ; :represents :C196 ; :belongsToLanguage :mel .
+:W589 rdf:type :Word , owl:NamedIndividual ; :wordValue "betul" ; :represents :C197 ; :belongsToLanguage :id .
+:W590 rdf:type :Word , owl:NamedIndividual ; :wordValue "bener" ; :represents :C197 ; :belongsToLanguage :su .
+:W591 rdf:type :Word , owl:NamedIndividual ; :wordValue "betul" ; :represents :C197 ; :belongsToLanguage :mel .
+:W592 rdf:type :Word , owl:NamedIndividual ; :wordValue "dekat" ; :represents :C198 ; :belongsToLanguage :id .
+:W593 rdf:type :Word , owl:NamedIndividual ; :wordValue "deukeut" ; :represents :C198 ; :belongsToLanguage :su .
+:W594 rdf:type :Word , owl:NamedIndividual ; :wordValue "dekat" ; :represents :C198 ; :belongsToLanguage :mel .
+:W595 rdf:type :Word , owl:NamedIndividual ; :wordValue "jauh" ; :represents :C199 ; :belongsToLanguage :id .
+:W596 rdf:type :Word , owl:NamedIndividual ; :wordValue "jauh" ; :represents :C199 ; :belongsToLanguage :su .
+:W597 rdf:type :Word , owl:NamedIndividual ; :wordValue "jauh" ; :represents :C199 ; :belongsToLanguage :mel .
+:W598 rdf:type :Word , owl:NamedIndividual ; :wordValue "kanan" ; :represents :C200 ; :belongsToLanguage :id .
+:W599 rdf:type :Word , owl:NamedIndividual ; :wordValue "katuhu" ; :represents :C200 ; :belongsToLanguage :su .
+:W600 rdf:type :Word , owl:NamedIndividual ; :wordValue "kanan" ; :represents :C200 ; :belongsToLanguage :mel .
+:W601 rdf:type :Word , owl:NamedIndividual ; :wordValue "kiri" ; :represents :C201 ; :belongsToLanguage :id .
+:W602 rdf:type :Word , owl:NamedIndividual ; :wordValue "kénca" ; :represents :C201 ; :belongsToLanguage :su .
+:W603 rdf:type :Word , owl:NamedIndividual ; :wordValue "kiri" ; :represents :C201 ; :belongsToLanguage :mel .
+:W604 rdf:type :Word , owl:NamedIndividual ; :wordValue "di" ; :represents :C202 ; :belongsToLanguage :id .
+:W605 rdf:type :Word , owl:NamedIndividual ; :wordValue "di" ; :represents :C202 ; :belongsToLanguage :su .
+:W606 rdf:type :Word , owl:NamedIndividual ; :wordValue "di" ; :represents :C202 ; :belongsToLanguage :mel .
+:W607 rdf:type :Word , owl:NamedIndividual ; :wordValue "dalam" ; :represents :C203 ; :belongsToLanguage :id .
+:W608 rdf:type :Word , owl:NamedIndividual ; :wordValue "jero" ; :represents :C203 ; :belongsToLanguage :su .
+:W609 rdf:type :Word , owl:NamedIndividual ; :wordValue "dalam" ; :represents :C203 ; :belongsToLanguage :mel .
+:W610 rdf:type :Word , owl:NamedIndividual ; :wordValue "dengan" ; :represents :C204 ; :belongsToLanguage :id .
+:W611 rdf:type :Word , owl:NamedIndividual ; :wordValue "jeung" ; :represents :C204 ; :belongsToLanguage :su .
+:W612 rdf:type :Word , owl:NamedIndividual ; :wordValue "dengan" ; :represents :C204 ; :belongsToLanguage :mel .
+:W613 rdf:type :Word , owl:NamedIndividual ; :wordValue "dan" ; :represents :C205 ; :belongsToLanguage :id .
+:W614 rdf:type :Word , owl:NamedIndividual ; :wordValue "jeung" ; :represents :C205 ; :belongsToLanguage :su .
+:W615 rdf:type :Word , owl:NamedIndividual ; :wordValue "dan" ; :represents :C205 ; :belongsToLanguage :mel .
+:W616 rdf:type :Word , owl:NamedIndividual ; :wordValue "kalau" ; :represents :C206 ; :belongsToLanguage :id .
+:W617 rdf:type :Word , owl:NamedIndividual ; :wordValue "lamun" ; :represents :C206 ; :belongsToLanguage :su .
+:W618 rdf:type :Word , owl:NamedIndividual ; :wordValue "kalau" ; :represents :C206 ; :belongsToLanguage :mel .
+:W619 rdf:type :Word , owl:NamedIndividual ; :wordValue "karena" ; :represents :C207 ; :belongsToLanguage :id .
+:W620 rdf:type :Word , owl:NamedIndividual ; :wordValue "ku_sabab" ; :represents :C207 ; :belongsToLanguage :su .
+:W621 rdf:type :Word , owl:NamedIndividual ; :wordValue "sebab" ; :represents :C207 ; :belongsToLanguage :mel .
+:W622 rdf:type :Word , owl:NamedIndividual ; :wordValue "nama" ; :represents :C208 ; :belongsToLanguage :id .
+:W623 rdf:type :Word , owl:NamedIndividual ; :wordValue "aran" ; :represents :C208 ; :belongsToLanguage :su .
+:W624 rdf:type :Word , owl:NamedIndividual ; :wordValue "nama" ; :represents :C208 ; :belongsToLanguage :mel .
