@@ -1,0 +1,50 @@
+@prefix : <http://www.semanticweb.org/ontologies/swadesh#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ontologies/swadesh> .
+
+<http://www.semanticweb.org/ontologies/swadesh> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties (Relasi)
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/swadesh#belongsToLanguage
+:belongsToLanguage rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Word ;
+                   rdfs:range :Language .
+
+
+###  http://www.semanticweb.org/ontologies/swadesh#represents
+:represents rdf:type owl:ObjectProperty ;
+            rdfs:domain :Word ;
+            rdfs:range :Concept .
+
+
+###  http://www.semanticweb.org/ontologies/swadesh#spokenInRegion
+:spokenInRegion rdf:type owl:ObjectProperty ;
+                rdfs:domain :Language ;
+                rdfs:range :Region .
+
+
+#################################################################
+#    Classes (Kategori Data)
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/swadesh#Concept
+:Concept rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/swadesh#Language
+:Language rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/swadesh#Region
+:Region rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/swadesh#Word
+:Word rdf:type owl:Class .
