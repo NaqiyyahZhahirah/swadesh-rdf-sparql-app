@@ -1,0 +1,36 @@
+@prefix : <http://www.semanticweb.org/ontologies/swadesh#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/ontologies/swadesh> rdf:type owl:Ontology .
+
+# =================================================================
+# Classes (Kelas)
+# =================================================================
+:Language rdf:type owl:Class .
+:Concept rdf:type owl:Class .
+:Word rdf:type owl:Class .
+
+# =================================================================
+# Object Properties (Properti Objek)
+# =================================================================
+:belongsToLanguage rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Word ;
+                   rdfs:range :Language .
+
+:represents rdf:type owl:ObjectProperty ;
+            rdfs:domain :Word ;
+            rdfs:range :Concept .
+
+# =================================================================
+# Data Properties (Properti Data)
+# =================================================================
+:wordValue rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Word ;
+           rdfs:range xsd:string .
+
+:conceptName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Concept ;
+             rdfs:range xsd:string .
