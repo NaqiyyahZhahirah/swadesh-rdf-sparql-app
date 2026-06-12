@@ -4,85 +4,132 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Swadesh Explorer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Swadesh RDF Explorer</a>
-        <ul class="nav nav-tabs mb-0 ms-auto" id="mainTabs">
+    <nav class="navbar fixed-top">
+      <div class="navbar-inner">
+        <a class="navbar-brand" href="#">
+          <span class="brand-mark">S</span>
+          <span class="brand-text">Swadesh<span class="brand-accent">.</span></span>
+        </a>
+
+        <!-- Bootstrap Tab ul tetap ada tapi disembunyikan, dipakai app.js -->
+        <ul class="nav nav-tabs d-none" id="mainTabs">
           <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#dashboard">Dashboard</a></li>
-          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#search">Search / Filter</a></li>
-          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#graph">Knowledge Graph</a></li>
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#search">Search</a></li>
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#graph">Graph</a></li>
         </ul>
+
+        <!-- Nav visual custom, trigger hidden Bootstrap tabs -->
+        <ul class="nav-tabs-custom">
+          <li><a class="nav-link-custom active" href="#" data-target="#home">Beranda</a></li>
+          <li><a class="nav-link-custom" href="#" data-target="#dashboard">Dashboard</a></li>
+          <li><a class="nav-link-custom" href="#" data-target="#search">Pencarian</a></li>
+          <li><a class="nav-link-custom" href="#" data-target="#graph">Graf Pengetahuan</a></li>
+        </ul>
+
+        <div class="nav-badge">SEMANTIC WEB</div>
       </div>
     </nav>
 
     <div class="nav-spacer"></div>
 
-    <div class="container">
+    <div class="main-container">
       <div class="tab-content">
-        <div class="tab-pane fade show active" id="home">
-          <div class="card-panel home-panel">
-            <div class="home-header">
-              <h2>Swadesh RDF Explorer</h2>
-              <p class="home-subtitle">Jelajahi Kosakata Lintas Budaya dengan Teknologi Semantic Web</p>
-            </div>
-            
-            <div class="row g-4 mt-2">
-              <div class="col-md-6">
-                <div class="feature-box">
-                  <div class="feature-icon icon-1">📊</div>
-                  <h5>Dashboard Kosakata</h5>
-                  <p>Lihat seluruh data Swadesh yang tersedia (hingga 200 kosakata) dalam satu tabel interaktif dengan fitur pencarian lokal dan pagination.</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-box">
-                  <div class="feature-icon icon-2">🔍</div>
-                  <h5>Pencarian Semantik</h5>
-                  <p>Cari kata di seluruh bahasa (Indonesia, Sunda, Melayu) secara bersamaan atau filter berdasarkan bahasa tertentu.</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-box">
-                  <div class="feature-icon icon-3">🕸️</div>
-                  <h5>Knowledge Graph</h5>
-                  <p>Visualisasi interaktif hubungan antara konsep dan kata dalam ketiga bahasa menggunakan Cytoscape.js yang powerful.</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-box">
-                  <div class="feature-icon icon-4">🌐</div>
-                  <h5>Teknologi Semantic Web</h5>
-                  <p>Dibangun dengan RDF, OWL Ontology, dan SPARQL Query untuk mendemonstrasikan kekuatan teknologi semantic web.</p>
-                </div>
-              </div>
-            </div>
 
-            <div class="info-section mt-5">
-              <h6>Tentang Dataset Swadesh</h6>
-              <p>Swadesh adalah daftar kosakata universal yang terdiri dari kata-kata yang sering digunakan dan relatif stabil secara historis dalam bahasa-bahasa di seluruh dunia. Dataset ini berisi padanan kata-kata dasar dalam Bahasa Indonesia, Bahasa Sunda, dan Bahasa Melayu.</p>
-              <p><strong>Mulai dari tab Dashboard atau langsung ke pencarian favorit Anda!</strong></p>
+        <!-- HOME -->
+        <div class="tab-pane fade show active" id="home">
+          <div class="hero-section">
+            <div class="hero-bg-words" aria-hidden="true">
+              <span>air</span><span>api</span><span>matahari</span><span>bumi</span>
+              <span>angin</span><span>cahaya</span><span>tangan</span><span>mata</span>
+              <span>laut</span><span>pohon</span><span>bintang</span><span>bulan</span>
             </div>
+            <div class="hero-content">
+              <div class="hero-eyebrow">Swadesh RDF Explorer</div>
+              <h1 class="hero-title">Menjelajahi Kosakata<br><em>Lintas Budaya</em></h1>
+              <p class="hero-desc">Eksplorasi &plusmn;200 kosakata dasar Swadesh dalam Bahasa Indonesia, Sunda, dan Melayu — direpresentasikan sebagai RDF Knowledge Graph yang bisa dikueri dengan SPARQL.</p>
+              <div class="hero-lang-pills">
+                <span class="lang-pill pill-id">Bahasa Indonesia</span>
+                <span class="lang-pill pill-su">Bahasa Sunda</span>
+                <span class="lang-pill pill-mel">Bahasa Melayu</span>
+              </div>
+              <a class="hero-cta" href="#" data-target="#dashboard">Mulai Eksplorasi →</a>
+            </div>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-num">01</div>
+              <div class="feature-icon-wrap icon-amber">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <h3>Dashboard Kosakata</h3>
+              <p>Seluruh data Swadesh dalam satu tabel interaktif dengan fitur pencarian, sorting, dan pagination.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-num">02</div>
+              <div class="feature-icon-wrap icon-teal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              </div>
+              <h3>Pencarian Semantik</h3>
+              <p>Cari kata di seluruh bahasa secara bersamaan atau filter berdasarkan bahasa tertentu menggunakan SPARQL.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-num">03</div>
+              <div class="feature-icon-wrap icon-amber">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+              </div>
+              <h3>Knowledge Graph</h3>
+              <p>Visualisasi interaktif hubungan antar konsep dan kata menggunakan Cytoscape.js.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-num">04</div>
+              <div class="feature-icon-wrap icon-teal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3>Teknologi Semantic Web</h3>
+              <p>Dibangun dengan RDF, OWL Ontology, dan SPARQL untuk mendemonstrasi kekuatan linked data.</p>
+            </div>
+          </div>
+
+          <div class="about-strip">
+            <div class="about-strip-label">Tentang Dataset</div>
+            <p>Swadesh adalah daftar kosakata universal yang relatif stabil secara historis &mdash;
+          digunakan dalam linguistik komparatif untuk mengukur kemiripan antar bahasa.
+          Dataset ini dikompilasi dari
+          <a href="https://id.wiktionary.org/wiki/Wikikamus:Daftar_Swadesh" target="_blank">Wikikamus</a>
+          dan mencakup &plusmn;200 konsep dalam tiga bahasa Austronesia.</p>
           </div>
         </div>
 
+        <!-- DASHBOARD -->
         <div class="tab-pane fade" id="dashboard">
+          <div class="page-header">
+            <div>
+              <div class="page-eyebrow">Semua Entri · Dapat Dicari & Diurutkan</div>
+              <h2 class="page-title">Dashboard Kosakata</h2>
+            </div>
+            <div class="lang-legend">
+              <span class="legend-chip chip-id">ID</span>
+              <span class="legend-chip chip-su">SU</span>
+              <span class="legend-chip chip-mel">MEL</span>
+            </div>
+          </div>
           <div class="card-panel">
-            <h5 class="section-title">Dashboard (Semua Kosakata)</h5>
-            <table id="data-table" class="display table table-striped" style="width:100%">
+            <table id="data-table" class="display" style="width:100%">
               <thead>
                 <tr>
                   <th>No</th>
                   <th>Konsep</th>
-                  <th>Bahasa Indonesia</th>
-                  <th>Bahasa Sunda</th>
-                  <th>Bahasa Melayu</th>
+                  <th><span class="th-lang th-id">ID</span> Indonesia</th>
+                  <th><span class="th-lang th-su">SU</span> Sunda</th>
+                  <th><span class="th-lang th-mel">MEL</span> Melayu</th>
                 </tr>
               </thead>
               <tbody></tbody>
@@ -90,35 +137,35 @@
           </div>
         </div>
 
+        <!-- SEARCH -->
         <div class="tab-pane fade" id="search">
-          <div class="card-panel">
-            <h5 class="section-title">Pencarian Semantik & Filter</h5>
-            <div class="row g-2 mb-4">
-              <div class="col-md-6">
-                <div class="input-group modern-input-group">
-                  <input id="search-input" class="form-control" placeholder="Ketik kata untuk mencari..." />
-                  <button id="search-btn" class="btn btn-primary">Cari</button>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <select id="lang-select" class="form-select">
-                  <option value="">Filter bahasa</option>
-                </select>
-              </div>
-              <div class="col-md-3 text-md-end">
-                <button id="clear-filter" class="btn btn-outline-secondary">Reset</button>
-              </div>
+          <div class="page-header">
+            <div>
+              <div class="page-eyebrow">Cari di Seluruh Bahasa Sekaligus</div>
+              <h2 class="page-title">Pencarian Semantik</h2>
             </div>
-
+          </div>
+          <div class="card-panel">
+            <div class="search-bar-row">
+              <div class="search-input-wrap">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input id="search-input" class="search-input" placeholder="Ketik kata untuk mencari…" />
+              </div>
+              <select id="lang-select" class="lang-select">
+                <option value="">Semua Bahasa</option>
+              </select>
+              <button id="search-btn" class="btn-primary-custom">Cari</button>
+              <button id="clear-filter" class="btn-ghost-custom">Reset</button>
+            </div>
             <div id="search-results">
-              <table id="search-table" class="display table table-sm" style="width:100%">
+              <table id="search-table" class="display" style="width:100%">
                 <thead>
                   <tr>
                     <th>No</th>
                     <th>Konsep</th>
-                    <th>Bahasa Indonesia</th>
-                    <th>Bahasa Sunda</th>
-                    <th>Bahasa Melayu</th>
+                    <th><span class="th-lang th-id">ID</span> Indonesia</th>
+                    <th><span class="th-lang th-su">SU</span> Sunda</th>
+                    <th><span class="th-lang th-mel">MEL</span> Melayu</th>
                   </tr>
                 </thead>
                 <tbody></tbody>
@@ -127,28 +174,32 @@
           </div>
         </div>
 
+        <!-- GRAPH -->
         <div class="tab-pane fade" id="graph">
-          <div class="card-panel">
-            <h5 class="section-title">Visualisasi Knowledge Graph</h5>
-            <div class="row mb-3 g-2">
-              <div class="col-md-6">
-                <select id="concepts-select" class="form-select"></select>
-              </div>
-              <div class="col-md-6 text-md-end">
-                <button id="load-graph" class="btn btn-primary">Tampilkan Graph</button>
-              </div>
+          <div class="page-header">
+            <div>
+              <div class="page-eyebrow">Hubungan Konsep & Kata secara Visual</div>
+              <h2 class="page-title">Graf Pengetahuan</h2>
             </div>
-            <div class="graph-legend mb-3">
-              <span><span class="legend-dot legend-concept"></span> Konsep</span>
-              <span><span class="legend-dot legend-id"></span> Bahasa Indonesia</span>
-              <span><span class="legend-dot legend-su"></span> Bahasa Sunda</span>
-              <span><span class="legend-dot legend-mel"></span> Bahasa Melayu</span>
+          </div>
+          <div class="card-panel">
+            <div class="graph-controls-row">
+              <select id="concepts-select" class="lang-select" style="flex:1; max-width:340px;"></select>
+              <button id="load-graph" class="btn-primary-custom">Tampilkan Graf</button>
+            </div>
+            <div class="graph-legend">
+              <span class="legend-item"><span class="legend-dot dot-concept"></span> Konsep</span>
+              <span class="legend-item"><span class="legend-dot dot-id"></span> Bahasa Indonesia</span>
+              <span class="legend-item"><span class="legend-dot dot-su"></span> Bahasa Sunda</span>
+              <span class="legend-item"><span class="legend-dot dot-mel"></span> Bahasa Melayu</span>
             </div>
             <div id="cy-container">
               <div id="cy"></div>
+              <div class="cy-hint">Pilih konsep lalu klik "Tampilkan Graf"</div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
@@ -157,5 +208,44 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://unpkg.com/cytoscape@3.24.1/dist/cytoscape.min.js"></script>
     <script src="app.js"></script>
+    <script>
+      // Custom nav: trigger hidden Bootstrap tabs + update active state
+      function switchTab(targetId) {
+        // trigger Bootstrap tab on the hidden nav
+        var hiddenLink = document.querySelector('#mainTabs a[href="' + targetId + '"]');
+        if (hiddenLink) {
+          var bsTab = new bootstrap.Tab(hiddenLink);
+          bsTab.show();
+        }
+        // update custom nav active state
+        document.querySelectorAll('.nav-link-custom').forEach(function(el) {
+          el.classList.toggle('active', el.dataset.target === targetId);
+        });
+      }
+
+      document.querySelectorAll('.nav-link-custom, .hero-cta').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          var target = this.dataset.target;
+          if (target) switchTab(target);
+        });
+      });
+
+      // Sync custom nav when Bootstrap tab changes (e.g. triggered by app.js)
+      document.querySelectorAll('#mainTabs .nav-link').forEach(function(el) {
+        el.addEventListener('shown.bs.tab', function(e) {
+          var href = e.target.getAttribute('href');
+          document.querySelectorAll('.nav-link-custom').forEach(function(c) {
+            c.classList.toggle('active', c.dataset.target === href);
+          });
+        });
+      });
+
+      // Hide cy-hint when graph loads
+      document.getElementById('load-graph').addEventListener('click', function() {
+        var hint = document.querySelector('.cy-hint');
+        if (hint) hint.style.display = 'none';
+      });
+    </script>
   </body>
 </html>

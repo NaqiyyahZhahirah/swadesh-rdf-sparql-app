@@ -102,9 +102,9 @@ async function loadGraph(concept) {
 
     const palette = {
       concept: '#8BA3C5',
-      id: '#496B7D',
-      su: '#6B8E9F',
-      mel: '#02122F'
+      id: '#4A8FA8',
+      su: '#8B5CF6',
+      mel: '#D4933A'
     };
 
     const elements = [];

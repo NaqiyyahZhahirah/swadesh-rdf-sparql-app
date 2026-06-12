@@ -190,9 +190,9 @@ def get_graph_data():
 
         # Node & Edge: tiap kata ke konsepnya
         lang_fields = {
-            "id":  ("bahasaIndo",  "🇮🇩"),
-            "su":  ("bahasaSunda", "🌺"),
-            "mel": ("bahasaMelayu","🌴"),
+            "id":  ("bahasaIndo",  "ID"),
+            "su":  ("bahasaSunda", "SU"),
+            "mel": ("bahasaMelayu","MEL"),
         }
         for lang_code, (field, flag) in lang_fields.items():
             kata = row.get(field, '')
