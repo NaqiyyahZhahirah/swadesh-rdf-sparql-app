@@ -6,7 +6,7 @@
 
 ## Deskripsi
 
-**Swadesh RDF Explorer** adalah aplikasi web berbasis *Semantic Web* yang mengeksplorasi **Daftar Swadesh** — sekumpulan kosakata dasar yang digunakan dalam linguistik komparatif — untuk tiga bahasa serumpun: **Bahasa Indonesia**, **Bahasa Sunda**, dan **Bahasa Melayu**.
+**Swadesh RDF Explorer** adalah aplikasi web berbasis *Semantic Web* yang mengeksplorasi **Daftar Swadesh** sekumpulan kosakata dasar yang digunakan dalam linguistik komparatif untuk tiga bahasa serumpun: **Bahasa Indonesia**, **Bahasa Sunda**, dan **Bahasa Melayu**.
 
 Data kosakata dimodelkan menggunakan **ontologi OWL/RDF** dan disimpan di **Apache Jena Fuseki** sebagai *triplestore*. Backend Flask mengirimkan query **SPARQL** ke Apache Jena Fuseki untuk mengambil data RDF secara semantik, kemudian menyajikannya melalui REST API yang digunakan oleh antarmuka web.
 
