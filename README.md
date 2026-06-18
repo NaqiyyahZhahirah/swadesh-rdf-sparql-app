@@ -1,4 +1,4 @@
-# Swadesh RDF Explorer
+# Swadesh RDF Explorer: Semantic Web Vocabulary Explorer
 
 > Jelajahi kosakata lintas budaya dengan teknologi Semantic Web — Bahasa Indonesia, Sunda, dan Melayu dalam satu platform interaktif.
 
@@ -8,7 +8,7 @@
 
 **Swadesh RDF Explorer** adalah aplikasi web berbasis *Semantic Web* yang mengeksplorasi **Daftar Swadesh** — sekumpulan kosakata dasar yang digunakan dalam linguistik komparatif — untuk tiga bahasa serumpun: **Bahasa Indonesia**, **Bahasa Sunda**, dan **Bahasa Melayu**.
 
-Data kosakata dimodelkan menggunakan **ontologi OWL/RDF** dan disimpan di **Apache Jena Fuseki** sebagai *triplestore*. Backend Flask mengirimkan query **SPARQL** ke Fuseki untuk mengambil data secara semantik, lalu menyajikannya lewat API REST yang dikonsumsi oleh frontend web.
+Data kosakata dimodelkan menggunakan **ontologi OWL/RDF** dan disimpan di **Apache Jena Fuseki** sebagai *triplestore*. Backend Flask mengirimkan query **SPARQL** ke Apache Jena Fuseki untuk mengambil data RDF secara semantik, kemudian menyajikannya melalui REST API yang digunakan oleh antarmuka web.
 
 ### Fitur Utama
 
@@ -39,11 +39,12 @@ swadesh-rdf-sparql-app/
 │   ├── 02-dashboard.png
 │   ├── 03-pencarian.png
 │   └── 04-graf.png
-└── ontology/
-    ├── generate_ontology.py    # Script konversi CSV → RDF/TTL
-    ├── swadesh_ontology.owl    # Skema ontologi
-    ├── swadesh_ontology.ttl    # Skema ontologi dalam format Turtle
-    └── swadesh_data.ttl        # Data RDF hasil konversi
+├── ontology/
+│   ├── generate_ontology.py    # Script konversi CSV → RDF/TTL
+│   ├── swadesh_ontology.owl    # Skema ontologi
+│   ├── swadesh_ontology.ttl    # Skema ontologi dalam format Turtle
+│   └── swadesh_data.ttl        # Data RDF hasil konversi
+└── README.md
 ```
 
 ---
@@ -261,3 +262,7 @@ Proyek Tugas Akhir Mata Kuliah **Semantic Web** — Universitas Padjadjaran
 ## Repository
 
 [https://github.com/NaqiyyahZhahirah/swadesh-rdf-sparql-app](https://github.com/NaqiyyahZhahirah/swadesh-rdf-sparql-app)
+
+## License
+
+This project is intended for educational purposes.
