@@ -44,6 +44,7 @@ swadesh-rdf-sparql-app/
 │   ├── swadesh_ontology.owl    # Skema ontologi
 │   ├── swadesh_ontology.ttl    # Skema ontologi dalam format Turtle
 │   └── swadesh_data.ttl        # Data RDF hasil konversi
+├── requirements.txt            # Daftar dependensi Python
 └── README.md
 ```
 
@@ -52,6 +53,8 @@ swadesh-rdf-sparql-app/
 ## Teknologi
 
 - **Backend:** Python, Flask, Flask-CORS
+- **Semantic Web:** RDF, OWL, rdflib
+- **SPARQL Client:** SPARQLWrapper
 - **Triplestore:** Apache Jena Fuseki
 - **Query Language:** SPARQL
 - **Ontologi:** OWL / RDF (Turtle format)
@@ -74,7 +77,7 @@ Pastikan perangkat sudah memiliki:
 Install dependensi Python:
 
 ```bash
-pip install flask flask-cors requests
+pip install -r requirements.txt
 ```
 
 ---
@@ -146,9 +149,17 @@ Lalu buka `http://127.0.0.1:8000/index.html` di browser.
 ### Urutan Menjalankan (Ringkasan)
 
 ```
-1. Jalankan Fuseki  →  http://localhost:3030
-2. Jalankan backend →  http://localhost:5000
-3. Jalankan frontend → http://localhost:8000
+1. Install dependency
+   pip install -r requirements.txt
+
+2. Jalankan Fuseki
+   http://localhost:3030
+
+3. Jalankan backend
+   http://localhost:5000
+
+4. Jalankan frontend
+   http://localhost:8000
 ```
 
 Ketiga layanan harus berjalan bersamaan agar aplikasi berfungsi penuh.
